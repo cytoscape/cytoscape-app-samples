@@ -20,14 +20,9 @@
 	default-lazy-init="false">
 
 
-	<bean id="myCytoPanel"
-          class="org.cytoscape.sample.internal.MyCytoPanel">
-	</bean>
-
-	<bean id="addTabbedPanelAction" class="org.cytoscape.sample.internal.AddTabbedPanelAction">
+	<bean id="addSubmenuAction" class="org.cytoscape.sample.internal.AddSubmenuAction">
 		<constructor-arg ref="cyApplicationManagerService" />
 		<constructor-arg ref="cytoscapeDesktopService" />
-		<constructor-arg ref="myCytoPanel" />
 	</bean>
 	
 </beans>
