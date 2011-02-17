@@ -4,16 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd">
 
-
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
                    	interface="org.cytoscape.session.CyApplicationManager" />
-	
 	<osgi:reference id="cytoscapeDesktopService"
 		interface="org.cytoscape.application.swing.CySwingApplication" />
-				
+	<osgi:reference id="guiTaskManagerServiceRef" interface="org.cytoscape.work.swing.GUITaskManager" />			
+						
 	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
+	<osgi:service id="sample10ActionService" ref="sample10Action"
 		interface="org.cytoscape.application.swing.CyAction" />
 
 </beans>
