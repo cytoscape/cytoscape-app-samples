@@ -9,11 +9,10 @@
 	<osgi:reference id="cyApplicationManagerService"
                    	interface="org.cytoscape.session.CyApplicationManager" />
 	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
-				
-	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
+	<osgi:reference id="guiTaskManagerServiceRef" interface="org.cytoscape.work.swing.GUITaskManager" />
+			
+	<!-- export service -->
+	<osgi:service id="sample22ActionService" ref="sample22Action"
 		interface="org.cytoscape.application.swing.CyAction" />
 
 </beans>
