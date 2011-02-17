@@ -13,7 +13,7 @@ public class MyTask extends AbstractTask {
 		// Give the task a title.
 		taskMonitor.setTitle("My task");
 
-		taskMonitor.setProgress(10);
+		taskMonitor.setProgress(0.1);
 		
 		try {
 			Thread.sleep(4000);
@@ -21,14 +21,14 @@ public class MyTask extends AbstractTask {
 		catch ( InterruptedException e){
 		}
 
-		taskMonitor.setProgress(50);
+		taskMonitor.setProgress(0.5);
 		
 		try {
 			Thread.sleep(4000);
 		}
 		catch ( InterruptedException e){
 		}
-		taskMonitor.setProgress(100);
+		taskMonitor.setProgress(1.0);
     }
     
     @Override

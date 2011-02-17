@@ -28,23 +28,5 @@ public class Sample22Action extends AbstractCyAction {
 		MyTaskFactory factory = new MyTaskFactory();
 		this.taskMgr.execute(factory);	
 	}
-	
-	/**
-	 *  DOCUMENT ME!
-	 *
-	 * @return  DOCUMENT ME!
-	 */
-	public boolean isInToolBar() {
-		return false;
-	}
-
-	/**
-	 *  DOCUMENT ME!
-	 *
-	 * @return  DOCUMENT ME!
-	 */
-	public boolean isInMenuBar() {
-		return true;
-	}
 
 }
