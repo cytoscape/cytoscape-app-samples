@@ -6,14 +6,16 @@
 
 
 	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
 	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
-				
-	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
-		interface="org.cytoscape.application.swing.CyAction" />
+
+	<!-- listeners -->
+	<osgi:service id="sample08Service" ref="sample08">
+                <osgi:interfaces>
+                        <value>org.cytoscape.model.events.AddedNodeListener</value>
+                        <value>org.cytoscape.model.events.NetworkAddedListener</value>
+                        <value>org.cytoscape.model.events.NetworkAboutToBeDestroyedListener</value>
+                        <value>org.cytoscape.view.model.events.NetworkViewAddedListener</value>
+                </osgi:interfaces>
+	</osgi:service>
 
 </beans>
