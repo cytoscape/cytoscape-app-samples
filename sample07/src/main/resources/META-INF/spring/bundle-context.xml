@@ -20,9 +20,8 @@
 	default-lazy-init="false">
 
 
-	<bean id="addSubmenuAction" class="org.cytoscape.sample.internal.AddSubmenuAction">
+	<bean id="sample07Action" class="org.cytoscape.sample.internal.Sample07Action">
 		<constructor-arg ref="cyApplicationManagerService" />
-		<constructor-arg ref="cytoscapeDesktopService" />
 	</bean>
 	
 </beans>
