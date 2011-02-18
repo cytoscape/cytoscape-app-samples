@@ -14,15 +14,13 @@
 
 
 	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
-	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
+	<osgi:reference id="cyApplicationManagerService" interface="org.cytoscape.session.CyApplicationManager" />
+	<osgi:reference id="guiTaskManagerServiceRef" interface="org.cytoscape.work.swing.GUITaskManager" />			
+	<osgi:reference id="cyNetworkManagerServiceRef" interface="org.cytoscape.model.CyNetworkManager" />		
+	<osgi:reference id="cyDataTableFactoryServiceRef" interface="org.cytoscape.model.CyTableFactory" />
 				
 	<!-- export task factories -->
-
-	<osgi:service id="loadAttributeDataActionService" ref="loadAttributeDataAction"
+	<osgi:service id="sample11ActionService" ref="sample11Action"
 		interface="org.cytoscape.application.swing.CyAction" />
 
 
