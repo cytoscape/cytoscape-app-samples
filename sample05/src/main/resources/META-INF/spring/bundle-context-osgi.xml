@@ -8,12 +8,24 @@
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
                    	interface="org.cytoscape.session.CyApplicationManager" />
+
+	<osgi:reference id="cyNetworkManagerServiceRef"
+		interface="org.cytoscape.model.CyNetworkManager" />
+		
+	<osgi:reference id="cyNetworkNamingServiceRef"
+		interface="org.cytoscape.session.CyNetworkNaming" />
 	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
+	<osgi:reference id="cyNetworkFactoryServiceRef"
+		interface="org.cytoscape.model.CyNetworkFactory" />
 				
 	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
-		interface="org.cytoscape.application.swing.CyAction" />
+	<osgi:service id="sample05TaskFactoryService" ref="sample05TaskFactory"
+		interface="org.cytoscape.work.TaskFactory">
+		<osgi:service-properties>
+			<entry key="title" value="Sample 5" />
+			<entry key="preferredMenu" value="Plugins" />
+			<entry key="menuGravity" value="11.0" />
+		</osgi:service-properties>
+	</osgi:service>
 
 </beans>
