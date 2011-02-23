@@ -96,13 +96,6 @@
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
 
-<!-- 
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>work-swing-api</artifactId>
-			<version>3.0.0-alpha1</version>
-		</dependency>
- -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-api</artifactId>

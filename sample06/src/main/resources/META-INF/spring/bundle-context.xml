@@ -19,10 +19,10 @@
 			http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd"
 	default-lazy-init="false">
 
-
-	<bean id="addSubmenuAction" class="org.cytoscape.sample.internal.AddSubmenuAction">
+	<bean id="sample06TaskFactory" class="org.cytoscape.sample.internal.Sample06TaskFactory">
 		<constructor-arg ref="cyApplicationManagerService" />
-		<constructor-arg ref="cytoscapeDesktopService" />
+		<constructor-arg ref="cyNetworkViewFactoryServiceRef" />
+		<constructor-arg ref="cyNetworkViewManagerServiceRef" />
 	</bean>
 	
 </beans>

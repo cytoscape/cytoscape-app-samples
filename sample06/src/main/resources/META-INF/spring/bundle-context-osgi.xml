@@ -4,16 +4,23 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd">
 
-
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
                    	interface="org.cytoscape.session.CyApplicationManager" />
 	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
+	<osgi:reference id="cyNetworkViewFactoryServiceRef"
+		interface="org.cytoscape.view.model.CyNetworkViewFactory" />
+				
+	<osgi:reference id="cyNetworkViewManagerServiceRef"
+		interface="org.cytoscape.view.model.CyNetworkViewManager" />				
 				
 	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
-		interface="org.cytoscape.application.swing.CyAction" />
-
+	<osgi:service id="sample06TaskFactoryService" ref="sample06TaskFactory"
+		interface="org.cytoscape.work.TaskFactory">
+		<osgi:service-properties>
+			<entry key="title" value="Sample 6" />
+			<entry key="preferredMenu" value="Plugins" />
+			<entry key="menuGravity" value="12.0" />
+		</osgi:service-properties>
+	</osgi:service>
 </beans>
