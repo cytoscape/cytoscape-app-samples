@@ -4,13 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd">
 
-
-		
 	<!-- export service -->
 	<osgi:service id="myNodeViewTaskFactoryService" ref="myNodeViewTaskFactory"
-		interface="org.cytoscape.sample.MyNodeViewTaskFactory">
+		interface="org.cytoscape.task.NodeViewTaskFactory">
 		<osgi:service-properties>
-			<entry key="title" value="My task to increase node size" />
+			<entry key="title" value="Double node size" />
 		</osgi:service-properties>
 	</osgi:service>
+	
 </beans>
