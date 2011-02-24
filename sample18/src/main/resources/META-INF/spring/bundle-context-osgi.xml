@@ -6,21 +6,16 @@
 
 
 	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
-	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
+    <osgi:reference id="undoSupportServiceRef"
+                    interface="org.cytoscape.work.undo.UndoSupport">
+    </osgi:reference>
 
-
-
-				
 	<!-- export services -->
-	<osgi:service id="myLayoutAlgorithmService"
-		ref="myLayoutAlgorithm" interface="org.cytoscape.view.layout.CyLayoutAlgorithm">
+	<osgi:service id="myLayoutService"
+		ref="myLayout" interface="org.cytoscape.view.layout.CyLayoutAlgorithm">
 	        <osgi:service-properties>
-		 	<entry key="preferredMenu" value="Layout" />
+		 	<entry key="preferredMenu" value="My Layouts" />
 		</osgi:service-properties>
 	</osgi:service>
-
+ 
 </beans>

@@ -19,10 +19,8 @@
 			http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd"
 	default-lazy-init="false">
 
-
-	<bean id="myLayoutAlgorithm" class="org.cytoscape.sample.internal.MyLayoutAlgorithm">
+	<bean id="myLayout" class="org.cytoscape.sample.internal.MyLayout">
 		<constructor-arg ref="undoSupportServiceRef"/>
-		<constructor-arg type="boolean" value="true"/>
 	</bean>
-	
+		
 </beans>
