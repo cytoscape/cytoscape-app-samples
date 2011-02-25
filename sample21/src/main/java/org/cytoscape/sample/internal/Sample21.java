@@ -45,10 +45,17 @@ public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedLis
 	// restore plugin state from files
 	public void handleEvent(SessionLoadedEvent e){
 
-		try {
+		if (e.getLoadedSession().getPluginFileListMap() == null || e.getLoadedSession().getPluginFileListMap().size() ==0){
+			return;
+		}
+		
+		List<File> files = e.getLoadedSession().getPluginFileListMap().get("sample21");
 
-			List<File> files = e.getLoadedSession().getPluginFileListMap().get("sample21");
+		if (files == null || files.size() ==0){
+			return;
+		}
 
+		try {			
 			File propFile = files.get(0);
 			
 			BufferedReader in = new BufferedReader(new FileReader(propFile));
