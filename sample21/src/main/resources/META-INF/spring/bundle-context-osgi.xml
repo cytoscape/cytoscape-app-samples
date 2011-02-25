@@ -4,16 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd">
 
-
-	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
-	
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
-				
-	<!-- export service -->
-	<osgi:service id="sample21Service" ref="sample21"
-		interface="org.cytoscape.application.swing.CyAction" />
+	<!-- listeners -->
+	<osgi:service id="sample21Service" ref="sample21">
+                <osgi:interfaces>
+                        <value>org.cytoscape.session.events.SessionAboutToBeSavedListener</value>
+                        <value>org.cytoscape.session.events.SessionLoadedListener</value>
+                </osgi:interfaces>
+	</osgi:service>
 
 </beans>

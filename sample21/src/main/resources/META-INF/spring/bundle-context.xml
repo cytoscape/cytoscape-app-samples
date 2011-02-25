@@ -20,9 +20,6 @@
 	default-lazy-init="false">
 
 
-	<bean id="sample21" class="org.cytoscape.sample.internal.Sample21">
-		<constructor-arg ref="cyApplicationManagerService" />
-		<constructor-arg ref="cytoscapeDesktopService" />
-	</bean>
-	
+	<bean id="sample21" class="org.cytoscape.sample.internal.Sample21" />
+
 </beans>
