@@ -43,10 +43,11 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
+import javax.swing.ImageIcon;
+
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.plugin.CyPluginAdapter;
-
-//import org.cytoscape.application.swing.CySwingApplication;
 
 /**
  *
@@ -62,6 +63,15 @@ public class Sample03a extends AbstractCyAction {
 		super("Sample03a Plugin", adapter.getCyApplicationManager());
 
 		setPreferredMenu("Plugins");
+		
+		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
+		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));
+		
+		putValue(LARGE_ICON_KEY, icon);
+		putValue(SMALL_ICON, smallIcon);
+
+		System.out.println("\nSample03a plugin constructor....");
+
 	}
 
 	/**
@@ -71,6 +81,26 @@ public class Sample03a extends AbstractCyAction {
 	 *            DOCUMENT ME!
 	 */
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Sample03a plugin menu item is clicked!");
+		System.out.println("Sample03a plugin/toolbar icon is clicked!");
 	}
+	
+	
+	/**
+	 *  DOCUMENT ME!
+	 *
+	 * @return  DOCUMENT ME!
+	 */
+	public boolean isInToolBar() {
+		return true;
+	}
+
+	/**
+	 *  DOCUMENT ME!
+	 *
+	 * @return  DOCUMENT ME!
+	 */
+	public boolean isInMenuBar() {
+		return false;
+	}
+	
 }
