@@ -38,7 +38,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Cytoscape-Plugin>com.mycompany.sample.internal.Sample02Plugin</Cytoscape-Plugin>
+              <Cytoscape-Plugin>org.cytoscape.sample.internal.Sample03a</Cytoscape-Plugin>
             </manifestEntries>
           </archive>
         </configuration>
