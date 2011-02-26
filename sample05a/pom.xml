@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cytoscape</groupId>
+  <artifactId>sample05a</artifactId>
+  <version>0.1</version>
+  <packaging>maven-plugin</packaging>
+  <name>sample05a</name>
+  <description>Test plugin 03a</description>
+  
+  <properties>
+    <bundle.symbolicName>sample05a</bundle.symbolicName>
+    <bundle.namespace>org.cytoscape.sample</bundle.namespace>
+  </properties>
+  
+    <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <!--
+       | example additional resource entries, useful when building Eclipse RCP applications
+      -->
+      <resource>
+        <directory>.</directory>
+        <includes>
+          <include>plugin.xml</include>
+          <include>plugin.properties</include>
+          <include>icons/**</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+    
+    
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Cytoscape-Plugin>org.cytoscape.sample.internal.Sample05a</Cytoscape-Plugin>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.ops4j</groupId>
+        <artifactId>maven-pax-plugin</artifactId>
+        <version>1.4</version>
+        <!--
+           | enable improved OSGi compilation support for the bundle life-cycle.
+           | to switch back to the standard bundle life-cycle, move this setting
+           | down to the maven-bundle-plugin section
+          -->
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>1.4.3</version>
+        <!--
+         | the following instructions build a simple set of public/private classes into an OSGi bundle
+        -->
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+            <Bundle-Version>${pom.version}</Bundle-Version>
+            <_include>-osgi.bnd</_include>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+    <dependencies>
+      	<dependency>
+      		<groupId>org.cytoscape</groupId>
+      		<artifactId>plugin-api</artifactId>
+      		<version>3.0.0-alpha3-SNAPSHOT</version>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.cytoscape</groupId>
+      		<artifactId>core-task-api</artifactId>
+      		<version>3.0.0-alpha3-SNAPSHOT</version>
+    	</dependency>
+  
+  		<dependency>
+    		<groupId>org.cytoscape</groupId>
+    		<artifactId>swing-application-api</artifactId>
+    		<version>3.0.0-alpha2-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>work-swing-api</artifactId>
+			<version>3.0.0-alpha2-SNAPSHOT</version>
+		</dependency>
+  
+    </dependencies>
+  
+  
+</project>
