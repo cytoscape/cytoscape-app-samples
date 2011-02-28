@@ -4,20 +4,26 @@ import static org.cytoscape.view.presentation.property.TwoDVisualLexicon.NETWORK
 import org.cytoscape.task.AbstractNetworkViewTask;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.work.TaskMonitor;
+import org.cytoscape.work.Tunable;
 
 
-class ZoomTask extends AbstractNetworkViewTask {
+public class ZoomTask extends AbstractNetworkViewTask {
 
-	protected double factor;
+	@Tunable(description="Scale")
+	public double scale = 0.2; // Default value
 
-	ZoomTask(CyNetworkView v, double factor) {
+	ZoomTask(CyNetworkView v) {
 		super(v);
-		this.factor = factor;
 	}
 
 	public void run(TaskMonitor tm) {
-		view.setVisualProperty(NETWORK_SCALE_FACTOR, 
-		view.getVisualProperty(NETWORK_SCALE_FACTOR).doubleValue() * factor);
+		
+		if(this.view == null){
+			return;
+		}
+		
+		double newScale = view.getVisualProperty(NETWORK_SCALE_FACTOR).doubleValue() * scale;
+		view.setVisualProperty(NETWORK_SCALE_FACTOR, newScale);
 		
 		view.updateView();
 	}
