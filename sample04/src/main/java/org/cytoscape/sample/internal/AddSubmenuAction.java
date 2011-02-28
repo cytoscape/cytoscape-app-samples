@@ -17,6 +17,7 @@ public class AddSubmenuAction extends AbstractCyAction {
 	private CySwingApplication desktopApp;
 
 	public AddSubmenuAction(CyApplicationManager appMgr, CySwingApplication desktopApp){
+		// Add a menu item -- File->Import->sample04
 		super("sample04...", appMgr);
 		setPreferredMenu("File.Import");
 		//setMenuGravity(2.0f);
