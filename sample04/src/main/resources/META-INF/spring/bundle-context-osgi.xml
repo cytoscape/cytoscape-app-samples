@@ -13,7 +13,7 @@
 		interface="org.cytoscape.application.swing.CySwingApplication" />
 				
 	<!-- export services -->
-	<osgi:service id="addSubmenuActionService" ref="addSubmenuAction"
+	<osgi:service id="Sample04ActionService" ref="Sample04Action"
 		interface="org.cytoscape.application.swing.CyAction" />
 
 </beans>
