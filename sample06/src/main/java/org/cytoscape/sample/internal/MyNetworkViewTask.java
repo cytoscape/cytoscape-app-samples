@@ -39,7 +39,7 @@ public class MyNetworkViewTask extends AbstractTask {
 				System.out.println("networkView already existed!");
 			}
 			
-			// The following snippet of code will destroy a networkview
+			// Set the variable destroyView to true, the following snippet of code will destroy a networkview
 			boolean destroyView = false;
 			if(destroyView)
 			{
