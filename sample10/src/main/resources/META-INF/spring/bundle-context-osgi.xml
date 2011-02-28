@@ -6,13 +6,15 @@
 
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
-	<osgi:reference id="cytoscapeDesktopService"
-		interface="org.cytoscape.application.swing.CySwingApplication" />
-	<osgi:reference id="guiTaskManagerServiceRef" interface="org.cytoscape.work.swing.GUITaskManager" />			
+                   	interface="org.cytoscape.session.CyApplicationManager" />		
 						
 	<!-- export services -->
-	<osgi:service id="sample10ActionService" ref="sample10Action"
-		interface="org.cytoscape.application.swing.CyAction" />
-
+	<osgi:service id="sample10TaskFactoryService" ref="sample10TaskFactory"
+		interface="org.cytoscape.work.TaskFactory">
+		<osgi:service-properties>
+			<entry key="title" value="Sample 10" />
+			<entry key="preferredMenu" value="Plugins" />
+			<entry key="menuGravity" value="11.0" />
+		</osgi:service-properties>
+	</osgi:service>
 </beans>
