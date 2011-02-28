@@ -15,7 +15,7 @@ import java.util.List;
 public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedListener {
 
 
-	// Save plugin state in files
+	// Save plugin state in a file
 	public void handleEvent(SessionAboutToBeSavedEvent e){
 	
 		String tmpDir = System.getProperty("java.io.tmpdir");
@@ -42,7 +42,7 @@ public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedLis
 	}
 	
 
-	// restore plugin state from files
+	// restore plugin state from a file
 	public void handleEvent(SessionLoadedEvent e){
 
 		if (e.getLoadedSession().getPluginFileListMap() == null || e.getLoadedSession().getPluginFileListMap().size() ==0){
