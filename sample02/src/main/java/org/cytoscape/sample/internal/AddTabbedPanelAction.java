@@ -20,13 +20,14 @@ public class AddTabbedPanelAction extends AbstractCyAction {
 	
 	public AddTabbedPanelAction(CyApplicationManager applicationManager, CySwingApplication desktopApp,
 			MyCytoPanel myCytoPanel){
-		
+		// Add a menu item -- Plugins->sample02
 		super("sample02", applicationManager);
 		setPreferredMenu("Plugins");
 
 		this.desktopApp = desktopApp;
 		
-		cytoPanelWest = desktopApp.getCytoPanel(CytoPanelName.WEST);
+		//Note: myCytoPanel is bean we defined and registered as a service
+		this.cytoPanelWest = desktopApp.getCytoPanel(CytoPanelName.WEST);
 		this.myCytoPanel = myCytoPanel;
 	}
 	
@@ -36,7 +37,7 @@ public class AddTabbedPanelAction extends AbstractCyAction {
 	 * @param e DOCUMENT ME!
 	 */
 	public void actionPerformed(ActionEvent e) {
-		// If the state of the cytoPanelEast is HIDE, show it
+		// If the state of the cytoPanelWest is HIDE, show it
 		if (cytoPanelWest.getState() == CytoPanelState.HIDE) {
 			cytoPanelWest.setState(CytoPanelState.DOCK);
 		}	
@@ -46,7 +47,6 @@ public class AddTabbedPanelAction extends AbstractCyAction {
 		if (index == -1) {
 			return;
 		}
-		
 		cytoPanelWest.setSelectedIndex(index);
 	}
 
