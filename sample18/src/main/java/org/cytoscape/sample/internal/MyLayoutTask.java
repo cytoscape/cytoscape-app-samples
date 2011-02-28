@@ -46,6 +46,7 @@ public class MyLayoutTask extends LayoutTask {
 			if (isLocked(nView))
 				continue;
 
+			// Shift current nodeView to a new position based on a random value
 			currX = nView.getVisualProperty(xLoc) + XRange*randomGenerator.nextDouble();
 			currY = nView.getVisualProperty(yLoc) + YRange*randomGenerator.nextDouble();
 			
