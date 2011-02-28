@@ -4,11 +4,15 @@ import org.cytoscape.model.CyNetwork;
 import org.cytoscape.session.CyApplicationManager;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
+import org.cytoscape.work.Tunable;
 import org.cytoscape.model.CyTable;
 
 
 public class DeleteAttributeTask extends AbstractTask {
 
+	@Tunable(description="Column name to delete")
+	public String columnName = "MyAttributeName";
+	
 	private CyApplicationManager appMgr;
 	public DeleteAttributeTask(CyApplicationManager appMgr){
 		this.appMgr = appMgr;	
@@ -24,8 +28,6 @@ public class DeleteAttributeTask extends AbstractTask {
 		CyNetwork currNet = this.appMgr.getCurrentNetworkView().getModel();
 		CyTable nodeTable = currNet.getDefaultNodeTable();
 		
-		String columnName = "MyAttributeName";
-
 		if(nodeTable.getColumn(columnName)!= null){
 			nodeTable.deleteColumn(columnName);			
 			System.out.println("Column "+ columnName + " is deleted");
