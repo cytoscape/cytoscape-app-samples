@@ -1,24 +1,21 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
-
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.application.swing.CytoPanel;
 import org.cytoscape.application.swing.CytoPanelName;
 import org.cytoscape.application.swing.CytoPanelState;
 import org.cytoscape.session.CyApplicationManager;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import org.cytoscape.application.swing.CytoPanelComponent;
 
-public class AddTabbedPanelAction extends AbstractCyAction {
+
+public class Sample02 extends AbstractCyAction {
 
 	private CySwingApplication desktopApp;
 	private final CytoPanel cytoPanelWest;
 	private MyCytoPanel myCytoPanel;
 	
-	public AddTabbedPanelAction(CyApplicationManager applicationManager, CySwingApplication desktopApp,
+	public Sample02(CyApplicationManager applicationManager, CySwingApplication desktopApp,
 			MyCytoPanel myCytoPanel){
 		// Add a menu item -- Plugins->sample02
 		super("sample02", applicationManager);
@@ -27,7 +24,7 @@ public class AddTabbedPanelAction extends AbstractCyAction {
 		this.desktopApp = desktopApp;
 		
 		//Note: myCytoPanel is bean we defined and registered as a service
-		this.cytoPanelWest = desktopApp.getCytoPanel(CytoPanelName.WEST);
+		this.cytoPanelWest = this.desktopApp.getCytoPanel(CytoPanelName.WEST);
 		this.myCytoPanel = myCytoPanel;
 	}
 	
