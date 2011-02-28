@@ -1,7 +1,9 @@
 package org.cytoscape.sample.internal;
 
+import org.cytoscape.session.CyApplicationManager;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
+import org.cytoscape.work.swing.GUITaskManager;
 
 public class MyTask extends AbstractTask {
 
@@ -29,9 +31,5 @@ public class MyTask extends AbstractTask {
 		catch ( InterruptedException e){
 		}
 		taskMonitor.setProgress(1.0);
-    }
-    
-    @Override
-    public void cancel() {
     }
 }
