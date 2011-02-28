@@ -10,8 +10,13 @@
                    	interface="org.cytoscape.session.CyApplicationManager" />
 			
 				
-	<!-- export services -->
-	<osgi:service id="sample07ActionService" ref="sample07Action"
-		interface="org.cytoscape.application.swing.CyAction" />
-
+	<!-- export service -->
+	<osgi:service id="sample07TaskFactoryService" ref="sample07TaskFactory"
+		interface="org.cytoscape.work.TaskFactory">
+		<osgi:service-properties>
+			<entry key="title" value="Sample 7" />
+			<entry key="preferredMenu" value="Plugins" />
+			<entry key="menuGravity" value="11.0" />
+		</osgi:service-properties>
+	</osgi:service>
 </beans>

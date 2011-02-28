@@ -20,7 +20,7 @@
 	default-lazy-init="false">
 
 
-	<bean id="sample07Action" class="org.cytoscape.sample.internal.Sample07Action">
+	<bean id="sample07TaskFactory" class="org.cytoscape.sample.internal.Sample07TaskFactory">
 		<constructor-arg ref="cyApplicationManagerService" />
 	</bean>
 	
