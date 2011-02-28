@@ -40,7 +40,7 @@ public class MyNetworkTask extends AbstractTask {
 				
 		netMgr.addNetwork(myNet);
 		
-		//// The following code will destroy a network
+		// Set the variable destroyNetwork to true, the following code will destroy a network
 		boolean destroyNetwork = false;
 		if (destroyNetwork){
 			// Get current network
