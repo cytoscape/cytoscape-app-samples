@@ -1,11 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+ 	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>org.cytoscape</groupId>
+		<version>3.0.0-alpha4</version>
+	</parent>
+	
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cytoscape</groupId>
   <artifactId>sample05a</artifactId>
   <version>0.1</version>
   <packaging>maven-plugin</packaging>
   <name>sample05a</name>
-  <description>Test plugin 03a</description>
+  <description>Test plugin 05a</description>
   
   <properties>
     <bundle.symbolicName>sample05a</bundle.symbolicName>
@@ -38,7 +45,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Cytoscape-Plugin>org.cytoscape.sample.internal.Sample05a</Cytoscape-Plugin>
+              <Cytoscape-Plugin>org.cytoscape.sample.internal.Sample05aPlugin</Cytoscape-Plugin>
             </manifestEntries>
           </archive>
         </configuration>
@@ -103,6 +110,13 @@
 			<artifactId>work-swing-api</artifactId>
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>work-api</artifactId>
+			<version>3.0.0-alpha3-SNAPSHOT</version>
+		</dependency>
+
   
     </dependencies>
   
