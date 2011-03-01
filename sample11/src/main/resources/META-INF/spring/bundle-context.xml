@@ -20,9 +20,8 @@
 	default-lazy-init="false">
 
 
-	<bean id="sample11Action" class="org.cytoscape.sample.internal.Sample11Action">
+	<bean id="sample11TaskFactory" class="org.cytoscape.sample.internal.Sample11TaskFactory">
 		<constructor-arg ref="cyApplicationManagerService" />
-		<constructor-arg ref="guiTaskManagerServiceRef" />
 		<constructor-arg ref="cyNetworkManagerServiceRef" />
 		<constructor-arg ref="cyDataTableFactoryServiceRef" />
 	</bean>
