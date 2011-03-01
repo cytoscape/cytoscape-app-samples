@@ -6,9 +6,7 @@ import org.cytoscape.session.CyApplicationManager;
 import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class Sample11TaskFactory implements TaskFactory{
-
-	CreateTableTask task;
+public class Sample11TaskFactory implements TaskFactory {
 	
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
@@ -20,9 +18,6 @@ public class Sample11TaskFactory implements TaskFactory{
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;
-		
-		System.out.println("Entering Sample11TaskFactory constructot...");
-		
 	}
 	public TaskIterator getTaskIterator() {
 		return new TaskIterator(new CreateTableTask(appMgr, netMgr, tableFactory));
