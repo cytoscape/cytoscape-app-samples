@@ -1,10 +1,11 @@
 package org.cytoscape.sample.internal;
 
 import org.cytoscape.session.CyApplicationManager;
-import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;
+import org.cytoscape.task.AbstractNetworkViewTaskFactory;
+import org.cytoscape.view.model.CyNetworkView;
 
-public class Sample09TaskFactory implements TaskFactory {
+public class Sample09TaskFactory extends AbstractNetworkViewTaskFactory {
 
 	private final CyApplicationManager appMgr;
 	
@@ -13,6 +14,7 @@ public class Sample09TaskFactory implements TaskFactory {
 	}
 	
 	public TaskIterator getTaskIterator(){
-		return new TaskIterator(new Sample09Task(appMgr));
+		CyNetworkView currView = appMgr.getCurrentNetworkView();
+		return new TaskIterator(new Sample09Task(currView) );
 	}
 }
