@@ -46,8 +46,6 @@ import java.awt.event.ActionEvent;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.plugin.CyPluginAdapter;
 
-//import org.cytoscape.application.swing.CySwingApplication;
-
 /**
  *
  */
@@ -58,12 +56,9 @@ public class Sample02aAction extends AbstractCyAction {
 	 * Creates a new action object.
 	 */
 	public Sample02aAction(CyPluginAdapter adapter) {
-				
-		super("Sample02a Plugin", adapter.getCyApplicationManager());
-
+		// Add a menu item at Plugins->Sample02a	
+		super("Sample02a", adapter.getCyApplicationManager());
 		setPreferredMenu("Plugins");
-
-		System.out.println("\n\torg.cytoscape.sample.internal.Sample02aAction()....");
 	}
 
 	/**
