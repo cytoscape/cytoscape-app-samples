@@ -1,0 +1,31 @@
+package org.cytoscape.sample.internal;
+
+import org.cytoscape.model.CyNetworkManager;
+import org.cytoscape.model.CyTableFactory;
+import org.cytoscape.session.CyApplicationManager;
+import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.TaskIterator;
+
+public class Sample11TaskFactory implements TaskFactory{
+
+	CreateTableTask task;
+	
+	private CyTableFactory tableFactory;
+	private CyApplicationManager appMgr;
+	private CyNetworkManager netMgr;
+	
+	public Sample11TaskFactory(CyApplicationManager appMgr, 
+			CyNetworkManager netMgr, CyTableFactory tableFactory){
+		
+		this.appMgr = appMgr;
+		this.netMgr = netMgr;
+		this.tableFactory = tableFactory;
+		
+		System.out.println("Entering Sample11TaskFactory constructot...");
+		
+	}
+	public TaskIterator getTaskIterator() {
+		return new TaskIterator(new CreateTableTask(appMgr, netMgr, tableFactory));
+	}
+
+}

@@ -13,14 +13,14 @@ import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
 
 
-public class ImportAttributeTask extends AbstractTask {
+public class CreateTableTask extends AbstractTask {
 	private static int numImports = 0;
 	
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
 	private CyNetworkManager netMgr;
 	
-	public ImportAttributeTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory){
+	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory){
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;
