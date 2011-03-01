@@ -11,17 +11,15 @@ public class Sample05aTask extends AbstractTask {
 
 	private CyPluginAdapter adapter;
 	
-	public Sample05aTask(CyPluginAdapter a) { //CyPluginAdapter adapter){
-		this.adapter = adapter;
-		
-		System.out.println("\nEntering Sample05aTask constructor...\n");
+	public Sample05aTask(CyPluginAdapter a) {
+		this.adapter = a;
 	}
 	
 	public void run(TaskMonitor monitor) {
 		// Create an empty network
 		CyNetwork myNet = adapter.getCyNetworkFactory().getInstance();
 		myNet.getCyRow().set(CyTableEntry.NAME, "My network");
-				      //adapter.namingUtil.getSuggestedNetworkTitle("My Network"));
+				     // adapter.namingUtil.getSuggestedNetworkTitle("My Network"));
 		
 		// Add two nodes to the network
 		CyNode node1 = myNet.addNode();
