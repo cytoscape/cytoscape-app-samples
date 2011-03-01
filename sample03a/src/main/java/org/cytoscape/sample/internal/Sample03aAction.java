@@ -52,26 +52,23 @@ import org.cytoscape.plugin.CyPluginAdapter;
 /**
  *
  */
-public class Sample03a extends AbstractCyAction {
+public class Sample03aAction extends AbstractCyAction {
 	private final static long serialVersionUID = 1202254699098L;
 
 	/**
 	 * Creates a new action object.
 	 */
-	public Sample03a(CyPluginAdapter adapter) {
+	public Sample03aAction(CyPluginAdapter adapter) {
 				
-		super("Sample03a Plugin", adapter.getCyApplicationManager());
-
-		setPreferredMenu("Plugins");
+		// Add a menu item at Plugins->Sample03a	
+		super("Sample03a", adapter.getCyApplicationManager());
+		setPreferredMenu("Plugins");		
 		
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
 		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));
 		
 		putValue(LARGE_ICON_KEY, icon);
 		putValue(SMALL_ICON, smallIcon);
-
-		System.out.println("\nSample03a plugin constructor....");
-
 	}
 
 	/**
@@ -100,7 +97,7 @@ public class Sample03a extends AbstractCyAction {
 	 * @return  DOCUMENT ME!
 	 */
 	public boolean isInMenuBar() {
-		return false;
+		return true;
 	}
 	
 }
