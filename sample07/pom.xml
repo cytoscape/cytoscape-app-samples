@@ -2,7 +2,7 @@
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>org.cytoscape</groupId>
-		<version>3.0.0-alpha4</version>
+		<version>3.0.0-alpha6-SNAPSHOT</version>
 	</parent>
 	
 	<properties>
@@ -66,22 +66,17 @@
 			<plugin>
 				<groupId>org.ops4j</groupId>
 				<artifactId>maven-pax-plugin</artifactId>
-				<version>1.4</version>
-				<!-- | enable improved OSGi compilation support for the bundle life-cycle. 
-					| to switch back to the standard bundle life-cycle, move this setting | down 
-					to the maven-bundle-plugin section -->
+				<version>${maven-pax-plugin.version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>1.4.3</version>
-				<!-- | the following instructions build a simple set of public/private 
-					classes into an OSGi bundle -->
+				<version>${maven-bundle-plugin.version}</version>
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
-						<Bundle-Version>${pom.version}</Bundle-Version>
+						<Bundle-Version>${project.version}</Bundle-Version>
 						<_include>-osgi.bnd</_include>
 					</instructions>
 				</configuration>
