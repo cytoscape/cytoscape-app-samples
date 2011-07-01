@@ -9,13 +9,13 @@
   
 	<properties>
 		<bundle.symbolicName>sample05a</bundle.symbolicName>
-		<bundle.namespace>org.cytoscape.sample</bundle.namespace>
+		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
 	</properties>
   
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample05a</artifactId>
 	<packaging>jar</packaging>
-	<name>${bundle.symbolicName} [${bundle.namespace}]</name>
+	<name>${bundle.symbolicName}</name>
 
     <build>
     <plugins>

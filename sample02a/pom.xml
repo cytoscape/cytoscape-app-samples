@@ -8,13 +8,13 @@
 
 	<properties>
 		<bundle.symbolicName>sample02a</bundle.symbolicName>
-		<bundle.namespace>org.cytoscape.sample</bundle.namespace>
+		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
 	</properties>
   
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample02a</artifactId>
 	<packaging>jar</packaging>
-	<name>${bundle.symbolicName} [${bundle.namespace}]</name>
+	<name>${bundle.symbolicName}</name>
   
     <build>
     <plugins>

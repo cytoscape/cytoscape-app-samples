@@ -8,13 +8,13 @@
 	
 	<properties>
 		<bundle.symbolicName>sample10</bundle.symbolicName>
-		<bundle.namespace>org.cytoscape.sample</bundle.namespace>
+		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
 	</properties>
 	
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample10</artifactId>
 	<packaging>bundle</packaging>
-	<name>${bundle.symbolicName} [${bundle.namespace}]</name>
+	<name>${bundle.symbolicName}</name>
   
   	<repositories>
 		<repository>
@@ -75,7 +75,6 @@
 					<instructions>
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<_include>-osgi.bnd</_include>
 					</instructions>
 				</configuration>
 			</plugin>
