@@ -1,40 +1,45 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.cytoscape</groupId>
-  <artifactId>sample02a</artifactId>
-  <version>0.1</version>
-  <packaging>maven-plugin</packaging>
-  <name>sample02a</name>
-  <description>Test plugin</description>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>org.cytoscape.sample</groupId>
+		<version>3.0.0-alpha1-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<bundle.symbolicName>sample02a</bundle.symbolicName>
+		<bundle.namespace>org.cytoscape.sample</bundle.namespace>
+	</properties>
   
-  <properties>
-    <bundle.symbolicName>sample02a</bundle.symbolicName>
-    <bundle.namespace>org.cytoscape.sample</bundle.namespace>
-  </properties>
+	<groupId>org.cytoscape.sample</groupId>
+	<artifactId>sample02a</artifactId>
+	<packaging>jar</packaging>
+	<name>${bundle.symbolicName} [${bundle.namespace}]</name>
   
     <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-      <!--
-       | example additional resource entries, useful when building Eclipse RCP applications
-      -->
-      <resource>
-        <directory>.</directory>
-        <includes>
-          <include>plugin.xml</include>
-          <include>plugin.properties</include>
-          <include>icons/**</include>
-        </includes>
-      </resource>
-    </resources>
     <plugins>
-    
-    
+			<!-- Cytoscape requires Java 1.6 -->
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <optimize>true</optimize>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                    <compilerArguments>
+                        <Xmaxwarns>10000</Xmaxwarns>
+                        <Xmaxerrs>10000</Xmaxerrs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
+        <version>${maven-jar-plugin.version}</version>
         <configuration>
           <archive>
             <manifestEntries>
@@ -47,34 +52,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
         <configuration>
           <redirectTestOutputToFile>true</redirectTestOutputToFile>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.ops4j</groupId>
-        <artifactId>maven-pax-plugin</artifactId>
-        <version>1.4</version>
-        <!--
-           | enable improved OSGi compilation support for the bundle life-cycle.
-           | to switch back to the standard bundle life-cycle, move this setting
-           | down to the maven-bundle-plugin section
-          -->
-        <extensions>true</extensions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>1.4.3</version>
-        <!--
-         | the following instructions build a simple set of public/private classes into an OSGi bundle
-        -->
-        <configuration>
-          <instructions>
-            <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
-            <Bundle-Version>${pom.version}</Bundle-Version>
-            <_include>-osgi.bnd</_include>
-          </instructions>
         </configuration>
       </plugin>
     </plugins>
@@ -84,24 +64,24 @@
       	<dependency>
       		<groupId>org.cytoscape</groupId>
       		<artifactId>plugin-api</artifactId>
-      		<version>3.0.0-alpha3-SNAPSHOT</version>
+      		<version>${org.cytoscape.plugin-api.version}</version>
     	</dependency>
     	<dependency>
       		<groupId>org.cytoscape</groupId>
       		<artifactId>core-task-api</artifactId>
-      		<version>3.0.0-alpha3-SNAPSHOT</version>
+      		<version>${org.cytoscape.core-task-api.version}</version>
     	</dependency>
   
   		<dependency>
     		<groupId>org.cytoscape</groupId>
     		<artifactId>swing-application-api</artifactId>
-    		<version>3.0.0-alpha2-SNAPSHOT</version>
+    		<version>${org.cytoscape.swing-application-api.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-swing-api</artifactId>
-			<version>3.0.0-alpha2-SNAPSHOT</version>
+			<version>${org.cytoscape.work-swing-api.version}</version>
 		</dependency>
   
     </dependencies>

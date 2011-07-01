@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.cytoscape.sample</groupId>
+  <artifactId>parent</artifactId>
+  <packaging>pom</packaging>
+  <version>3.0.0-alpha1-SNAPSHOT</version>
+  <name>Cytoscape Sample Code Parent POM</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
+	<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
+	<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
+	<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
+	<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+	<org.cytoscape.core-task-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.core-task-api.version>
+	<org.cytoscape.layout-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.layout-api.version>
+	<org.cytoscape.model-api.version>3.0.0-alpha5-SNAPSHOT</org.cytoscape.model-api.version>
+	<org.cytoscape.viewmodel-api.version>3.0.0-alpha5-SNAPSHOT</org.cytoscape.viewmodel-api.version>
+	<org.cytoscape.plugin-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.plugin-api.version>
+	<org.cytoscape.swing-application-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.swing-application-api.version>
+	<org.cytoscape.webservice-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.webservice-api.version>
+	<org.cytoscape.work-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.work-api.version>
+	<org.cytoscape.work-swing-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.work-swing-api.version>
+  </properties>
+ 
+  <modules>
+	<module>sample02</module>
+	<module>sample02a</module>
+	<module>sample03</module>
+	<module>sample03a</module>
+	<module>sample04</module>
+	<module>sample05</module>
+	<module>sample05a</module>
+	<module>sample06</module>
+	<module>sample07</module>
+	<module>sample08</module>
+	<module>sample09</module>
+	<module>sample10</module>
+	<module>sample11</module>
+	<module>sample12</module>
+	<module>sample18</module>
+	<module>sample20</module>
+	<module>sample21</module>
+	<module>sample22</module>
+  </modules>
+</project> 

@@ -10,17 +10,17 @@ import org.cytoscape.work.TaskMonitor;
 
 public class MyTask  extends AbstractNetworkTask {
 	
-	public MyTask(CyNetwork net){
-		super(net);
+	public MyTask(CyNetwork network){
+		super(network);
 	}
 	public void run(TaskMonitor monitor) {
 		
-		if (this.net == null){			
+		if (this.network == null){			
 			return;
 		}
 
 		//Get the selected nodes, but only create network if nodes are actually selected.
-		List<CyNode> nodes = CyTableUtil.getNodesInState(this.net,"selected",true);
+		List<CyNode> nodes = CyTableUtil.getNodesInState(this.network,"selected",true);
 		
 		System.out.println("Number of selected nodes are "+nodes.size());
 

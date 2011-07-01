@@ -1,8 +1,8 @@
 package org.cytoscape.sample.internal;
 
 
-import org.cytoscape.model.events.AddedNodeEvent;
-import org.cytoscape.model.events.AddedNodeListener;
+import org.cytoscape.model.events.AddedNodesEvent;
+import org.cytoscape.model.events.AddedNodesListener;
 import org.cytoscape.model.events.NetworkAboutToBeDestroyedEvent;
 import org.cytoscape.model.events.NetworkAboutToBeDestroyedListener;
 import org.cytoscape.model.events.NetworkAddedEvent;
@@ -12,7 +12,7 @@ import org.cytoscape.view.model.events.NetworkViewAddedListener;
 
 
 public class Sample08 implements NetworkAddedListener, NetworkAboutToBeDestroyedListener,
-				NetworkViewAddedListener, AddedNodeListener {
+				NetworkViewAddedListener, AddedNodesListener {
 
 	public Sample08(){
 	
@@ -32,7 +32,7 @@ public class Sample08 implements NetworkAddedListener, NetworkAboutToBeDestroyed
 		System.out.println("Sample08: NetworkViewAddedEvent is received!");		
 	}
 
-	public void handleEvent(AddedNodeEvent e){
-		System.out.println("Sample08: AddedNodeEvent is received!");
+	public void handleEvent(AddedNodesEvent e){
+		System.out.println("Sample08: AddedNodesEvent is received!");
 	}	
 }

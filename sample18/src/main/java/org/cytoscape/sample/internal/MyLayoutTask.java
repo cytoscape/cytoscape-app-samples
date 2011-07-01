@@ -3,15 +3,15 @@ package org.cytoscape.sample.internal;
 import java.util.Set;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
-import org.cytoscape.view.layout.LayoutTask;
+import org.cytoscape.view.layout.AbstractBasicLayoutTask;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.View;
 import org.cytoscape.view.model.VisualProperty;
-import org.cytoscape.view.presentation.property.TwoDVisualLexicon;
+import org.cytoscape.view.presentation.property.MinimalVisualLexicon;
 import org.cytoscape.work.TaskMonitor;
 import java.util.Random;
 
-public class MyLayoutTask extends LayoutTask {
+public class MyLayoutTask extends AbstractBasicLayoutTask {
 
 	private int XRange;
 	private int YRange;
@@ -30,13 +30,13 @@ public class MyLayoutTask extends LayoutTask {
 	 *  This creates the default square layout.
 	 */
 	@Override
-	final protected void doLayout(final TaskMonitor taskMonitor, final CyNetwork network) {
+	final protected void doLayout(final TaskMonitor taskMonitor) {
 
 		double currX = 0.0d;
 		double currY = 0.0d;
 		
-		final VisualProperty<Double> xLoc = TwoDVisualLexicon.NODE_X_LOCATION;
-		final VisualProperty<Double> yLoc = TwoDVisualLexicon.NODE_Y_LOCATION;
+		final VisualProperty<Double> xLoc = MinimalVisualLexicon.NODE_X_LOCATION;
+		final VisualProperty<Double> yLoc = MinimalVisualLexicon.NODE_Y_LOCATION;
 		
 		Random randomGenerator = new Random();
 		
