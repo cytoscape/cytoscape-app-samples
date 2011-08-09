@@ -86,17 +86,17 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>webservice-api</artifactId>
-			<version>${org.cytoscape.webservice-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>swing-application-api</artifactId>
-			<version>${org.cytoscape.swing-application-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-api</artifactId>
-			<version>${org.cytoscape.work-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
 	</dependencies>
 

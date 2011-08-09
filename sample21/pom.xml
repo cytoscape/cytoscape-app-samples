@@ -85,7 +85,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>swing-application-api</artifactId>
-			<version>${org.cytoscape.swing-application-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
     </dependencies>
   

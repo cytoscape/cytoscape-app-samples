@@ -85,12 +85,12 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>model-api</artifactId>
-			<version>${org.cytoscape.model-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>		
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>viewmodel-api</artifactId>
-			<version>${org.cytoscape.viewmodel-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
     </dependencies>
   

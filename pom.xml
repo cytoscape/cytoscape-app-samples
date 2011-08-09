@@ -20,15 +20,7 @@
 	<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
 	<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
 	<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
-	<org.cytoscape.core-task-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.core-task-api.version>
-	<org.cytoscape.layout-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.layout-api.version>
-	<org.cytoscape.model-api.version>3.0.0-alpha5-SNAPSHOT</org.cytoscape.model-api.version>
-	<org.cytoscape.viewmodel-api.version>3.0.0-alpha5-SNAPSHOT</org.cytoscape.viewmodel-api.version>
-	<org.cytoscape.plugin-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.plugin-api.version>
-	<org.cytoscape.swing-application-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.swing-application-api.version>
-	<org.cytoscape.webservice-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.webservice-api.version>
-	<org.cytoscape.work-api.version>3.0.0-alpha4-SNAPSHOT</org.cytoscape.work-api.version>
-	<org.cytoscape.work-swing-api.version>3.0.0-alpha3-SNAPSHOT</org.cytoscape.work-swing-api.version>
+	<cytoscape.api.version>3.0.0-alpha6-SNAPSHOT</cytoscape.api.version>
   </properties>
  
   <modules>

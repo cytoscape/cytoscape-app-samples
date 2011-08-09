@@ -64,24 +64,24 @@
       	<dependency>
       		<groupId>org.cytoscape</groupId>
       		<artifactId>plugin-api</artifactId>
-      		<version>${org.cytoscape.plugin-api.version}</version>
+      		<version>${cytoscape.api.version}</version>
     	</dependency>
     	<dependency>
       		<groupId>org.cytoscape</groupId>
       		<artifactId>core-task-api</artifactId>
-      		<version>${org.cytoscape.core-task-api.version}</version>
+      		<version>${cytoscape.api.version}</version>
     	</dependency>
   
   		<dependency>
     		<groupId>org.cytoscape</groupId>
     		<artifactId>swing-application-api</artifactId>
-    		<version>${org.cytoscape.swing-application-api.version}</version>
+    		<version>${cytoscape.api.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-swing-api</artifactId>
-			<version>${org.cytoscape.work-swing-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
   
     </dependencies>

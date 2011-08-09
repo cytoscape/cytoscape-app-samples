@@ -85,12 +85,12 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>core-task-api</artifactId>
-			<version>${org.cytoscape.core-task-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-api</artifactId>
-			<version>${org.cytoscape.work-api.version}</version>
+			<version>${cytoscape.api.version}</version>
 		</dependency>
     </dependencies>
   
