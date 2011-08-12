@@ -1,12 +1,13 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
+import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.application.swing.CytoPanel;
 import org.cytoscape.application.swing.CytoPanelName;
 import org.cytoscape.application.swing.CytoPanelState;
-import org.cytoscape.session.CyApplicationManager;
 
 
 public class Sample02 extends AbstractCyAction {

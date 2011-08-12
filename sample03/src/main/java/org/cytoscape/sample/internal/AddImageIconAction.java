@@ -3,9 +3,10 @@ package org.cytoscape.sample.internal;
 import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
+
+import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.session.CyApplicationManager;
 import javax.swing.JOptionPane;
 
 public class AddImageIconAction extends AbstractCyAction {

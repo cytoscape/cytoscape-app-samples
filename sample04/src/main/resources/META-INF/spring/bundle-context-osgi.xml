@@ -7,7 +7,7 @@
 
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
+                   	interface="org.cytoscape.application.CyApplicationManager" />
 	
 	<osgi:reference id="cytoscapeDesktopService"
 		interface="org.cytoscape.application.swing.CySwingApplication" />

@@ -1,8 +1,8 @@
 package org.cytoscape.sample.internal;
 
+import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.model.CyNetworkFactory;
 import org.cytoscape.model.CyNetworkManager;
-import org.cytoscape.session.CyApplicationManager;
 import org.cytoscape.session.CyNetworkNaming;
 import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;

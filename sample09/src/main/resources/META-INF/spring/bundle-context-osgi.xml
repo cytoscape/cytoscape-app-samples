@@ -7,7 +7,7 @@
 
 	<!-- imports -->
 	<osgi:reference id="cyApplicationManagerService"
-                   	interface="org.cytoscape.session.CyApplicationManager" />
+                   	interface="org.cytoscape.application.CyApplicationManager" />
 		
 	<!-- export service -->
 	<osgi:service id="sample09TaskFactoryService" ref="sample09TaskFactory"

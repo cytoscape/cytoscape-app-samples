@@ -14,7 +14,7 @@
 
 
 	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService" interface="org.cytoscape.session.CyApplicationManager" />			
+	<osgi:reference id="cyApplicationManagerService" interface="org.cytoscape.application.CyApplicationManager" />			
 	<osgi:reference id="cyNetworkManagerServiceRef" interface="org.cytoscape.model.CyNetworkManager" />		
 	<osgi:reference id="cyDataTableFactoryServiceRef" interface="org.cytoscape.model.CyTableFactory" />
 				

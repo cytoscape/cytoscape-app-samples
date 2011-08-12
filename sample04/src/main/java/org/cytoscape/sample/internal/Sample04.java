@@ -1,9 +1,10 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
+import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.session.CyApplicationManager;
 import javax.swing.JOptionPane;
 
 public class Sample04 extends AbstractCyAction {
