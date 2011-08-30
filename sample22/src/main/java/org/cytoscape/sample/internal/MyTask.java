@@ -3,7 +3,6 @@ package org.cytoscape.sample.internal;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-import org.cytoscape.work.swing.GUITaskManager;
 
 public class MyTask extends AbstractTask {
 
