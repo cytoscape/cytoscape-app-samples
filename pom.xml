@@ -20,7 +20,6 @@
 	<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
 	<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
 	<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
-	<cytoscape.api.version>3.0.0-alpha6-SNAPSHOT</cytoscape.api.version>
   </properties>
  
   <modules>
