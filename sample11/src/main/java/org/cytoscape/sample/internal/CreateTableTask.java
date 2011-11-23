@@ -3,6 +3,7 @@ package org.cytoscape.sample.internal;
 import java.io.IOException;
 
 import org.cytoscape.application.CyApplicationManager;
+import org.cytoscape.model.subnetwork.CyRootNetworkFactory;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.CyRow;
@@ -20,11 +21,13 @@ public class CreateTableTask extends AbstractTask {
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
 	private CyNetworkManager netMgr;
+	private CyRootNetworkFactory rootNetworkFactory;
 	
-	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory){
+	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory, CyRootNetworkFactory rootNetworkFactory){
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;
+		this.rootNetworkFactory = rootNetworkFactory;
 	}
 	
 	@Override
@@ -52,7 +55,7 @@ public class CreateTableTask extends AbstractTask {
 		Class<? extends CyTableEntry> type = CyNode.class;
 
 		// Step 3: pass the new table to MapNetworkAttrTask
-		super.insertTasksAfterCurrentTask( new MapNetworkAttrTask(type,table,netMgr,appMgr) );
+		super.insertTasksAfterCurrentTask( new MapNetworkAttrTask(type,table,netMgr,appMgr,rootNetworkFactory) );
 
 	}
 }
