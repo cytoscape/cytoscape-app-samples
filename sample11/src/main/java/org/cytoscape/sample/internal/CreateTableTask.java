@@ -3,7 +3,7 @@ package org.cytoscape.sample.internal;
 import java.io.IOException;
 
 import org.cytoscape.application.CyApplicationManager;
-import org.cytoscape.model.subnetwork.CyRootNetworkFactory;
+import org.cytoscape.model.subnetwork.CyRootNetworkManager;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.CyRow;
@@ -21,9 +21,9 @@ public class CreateTableTask extends AbstractTask {
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
 	private CyNetworkManager netMgr;
-	private CyRootNetworkFactory rootNetworkFactory;
+	private CyRootNetworkManager rootNetworkFactory;
 	
-	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory, CyRootNetworkFactory rootNetworkFactory){
+	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory, CyRootNetworkManager rootNetworkFactory){
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;

@@ -3,7 +3,7 @@ package org.cytoscape.sample.internal;
 import org.cytoscape.model.CyTableFactory;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.model.CyNetworkManager;
-import org.cytoscape.model.subnetwork.CyRootNetworkFactory;
+import org.cytoscape.model.subnetwork.CyRootNetworkManager;
 
 import org.cytoscape.sample.internal.Sample11TaskFactory;
 
@@ -29,7 +29,7 @@ public class CyActivator extends AbstractCyActivator {
 		CyApplicationManager cyApplicationManagerService = getService(bc,CyApplicationManager.class);
 		CyNetworkManager cyNetworkManagerServiceRef = getService(bc,CyNetworkManager.class);
 		CyTableFactory cyDataTableFactoryServiceRef = getService(bc,CyTableFactory.class);
-		CyRootNetworkFactory cyRootNetworkFactoryServiceRef = getService(bc,CyRootNetworkFactory.class);
+		CyRootNetworkManager cyRootNetworkFactoryServiceRef = getService(bc,CyRootNetworkManager.class);
 		
 		Sample11TaskFactory sample11TaskFactory = new Sample11TaskFactory(cyApplicationManagerService,cyNetworkManagerServiceRef,cyDataTableFactoryServiceRef,cyRootNetworkFactoryServiceRef);
 		
