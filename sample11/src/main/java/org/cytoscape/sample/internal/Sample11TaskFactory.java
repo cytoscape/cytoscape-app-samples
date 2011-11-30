@@ -12,19 +12,19 @@ public class Sample11TaskFactory implements TaskFactory {
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
 	private CyNetworkManager netMgr;
-	private CyRootNetworkManager rootNetworkFactory;
+	private CyRootNetworkManager rootNetworkManager;
 	
 	public Sample11TaskFactory(CyApplicationManager appMgr, 
 			CyNetworkManager netMgr, CyTableFactory tableFactory,
-			CyRootNetworkManager rootNetworkFactory){
+			CyRootNetworkManager rootNetworkManager){
 		
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;
-		this.rootNetworkFactory = rootNetworkFactory;
+		this.rootNetworkManager = rootNetworkManager;
 	}
 	public TaskIterator getTaskIterator() {
-		return new TaskIterator(new CreateTableTask(appMgr, netMgr, tableFactory, rootNetworkFactory));
+		return new TaskIterator(new CreateTableTask(appMgr, netMgr, tableFactory, rootNetworkManager));
 	}
 
 }

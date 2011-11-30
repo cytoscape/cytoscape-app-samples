@@ -21,13 +21,13 @@ public class CreateTableTask extends AbstractTask {
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;
 	private CyNetworkManager netMgr;
-	private CyRootNetworkManager rootNetworkFactory;
+	private CyRootNetworkManager rootNetworkManager;
 	
-	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory, CyRootNetworkManager rootNetworkFactory){
+	public CreateTableTask(CyApplicationManager appMgr, CyNetworkManager netMgr, CyTableFactory tableFactory, CyRootNetworkManager rootNetworkManager){
 		this.appMgr = appMgr;
 		this.netMgr = netMgr;
 		this.tableFactory = tableFactory;
-		this.rootNetworkFactory = rootNetworkFactory;
+		this.rootNetworkManager = rootNetworkManager;
 	}
 	
 	@Override
@@ -55,7 +55,7 @@ public class CreateTableTask extends AbstractTask {
 		Class<? extends CyTableEntry> type = CyNode.class;
 
 		// Step 3: pass the new table to MapNetworkAttrTask
-		super.insertTasksAfterCurrentTask( new MapNetworkAttrTask(type,table,netMgr,appMgr,rootNetworkFactory) );
+		super.insertTasksAfterCurrentTask( new MapNetworkAttrTask(type,table,netMgr,appMgr,rootNetworkManager) );
 
 	}
 }
