@@ -19,7 +19,7 @@ public class Sample06TaskFactory implements TaskFactory {
 		this.networkViewManager = networkViewManager;
 	}
 	
-	public TaskIterator getTaskIterator(){
+	public TaskIterator createTaskIterator(){
 		return new TaskIterator(new MyNetworkViewTask(appMgr, cnvf, networkViewManager));
 	}
 }

@@ -13,7 +13,7 @@ public class Sample10TaskFactory extends AbstractNetworkViewTaskFactory {
 		this.appMgr = appMgr;
 	}
 	
-	public TaskIterator getTaskIterator() {
+	public TaskIterator createTaskIterator() {
 		this.view =  this.appMgr.getCurrentNetworkView();	
 		
 		return new TaskIterator(new ZoomTask(this.view));

@@ -23,7 +23,7 @@ public class Sample11TaskFactory implements TaskFactory {
 		this.tableFactory = tableFactory;
 		this.rootNetworkManager = rootNetworkManager;
 	}
-	public TaskIterator getTaskIterator() {
+	public TaskIterator createTaskIterator() {
 		return new TaskIterator(new CreateTableTask(appMgr, netMgr, tableFactory, rootNetworkManager));
 	}
 

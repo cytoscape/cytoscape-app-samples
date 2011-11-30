@@ -11,7 +11,7 @@ public class Sample05aTaskFactory implements TaskFactory {
 		this.a = a;
 	}
 	
-	public TaskIterator getTaskIterator(){
+	public TaskIterator createTaskIterator(){
 		return new TaskIterator(new Sample05aTask(a));
 	}
 }

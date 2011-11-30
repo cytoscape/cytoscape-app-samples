@@ -13,7 +13,7 @@ public class Sample09TaskFactory extends AbstractNetworkViewTaskFactory {
 		this.appMgr = appMgr;
 	}
 	
-	public TaskIterator getTaskIterator(){
+	public TaskIterator createTaskIterator(){
 		CyNetworkView currView = appMgr.getCurrentNetworkView();
 		return new TaskIterator(new Sample09Task(currView) );
 	}

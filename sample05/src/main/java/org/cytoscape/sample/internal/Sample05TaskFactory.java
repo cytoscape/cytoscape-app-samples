@@ -21,7 +21,7 @@ public class Sample05TaskFactory implements TaskFactory {
 		this.cnf = cnf;
 	}
 	
-	public TaskIterator getTaskIterator(){
+	public TaskIterator createTaskIterator(){
 		return new TaskIterator(new MyNetworkTask(appMgr, netMgr, namingUtil, cnf));
 	}
 }

@@ -35,7 +35,7 @@ public class MyLayout extends AbstractLayoutAlgorithm implements TunableValidato
 		return ValidationState.INVALID;
 	}
 
-	public TaskIterator getTaskIterator() {
+	public TaskIterator createTaskIterator() {
 		return new TaskIterator(new MyLayoutTask(networkView, getName(), selectedOnly, staticNodes, XRange, YRange));
 	}
 

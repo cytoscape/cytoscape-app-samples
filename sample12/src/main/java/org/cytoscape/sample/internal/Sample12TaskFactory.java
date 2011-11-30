@@ -12,7 +12,7 @@ public class Sample12TaskFactory implements TaskFactory {
 		this.appMgr = appMgr;
 	}
 	
-	public TaskIterator getTaskIterator(){
+	public TaskIterator createTaskIterator(){
 		return new TaskIterator(new DeleteAttributeTask(appMgr));
 	}
 }
