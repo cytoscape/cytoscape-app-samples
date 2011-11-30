@@ -32,7 +32,7 @@ public class MyNetworkViewTask extends AbstractTask {
 
 			if(networkViewManager.getNetworkView(currNet.getSUID()) == null){
 				// create a new view for current network
-				CyNetworkView myView = cnvf.getNetworkView(currNet);
+				CyNetworkView myView = cnvf.createNetworkView(currNet);
 				networkViewManager.addNetworkView(myView);				
 			}
 			else {
