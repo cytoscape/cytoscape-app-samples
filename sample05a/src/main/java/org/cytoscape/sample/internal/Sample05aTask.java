@@ -18,7 +18,7 @@ public class Sample05aTask extends AbstractTask {
 	public void run(TaskMonitor monitor) {
 		// Create an empty network
 		CyNetwork myNet = adapter.getCyNetworkFactory().createNetwork();
-		myNet.getCyRow().set(CyTableEntry.NAME, "My network");
+		myNet.getCyRow(myNet).set(CyTableEntry.NAME, "My network");
 				     // adapter.namingUtil.getSuggestedNetworkTitle("My Network"));
 		
 		// Add two nodes to the network

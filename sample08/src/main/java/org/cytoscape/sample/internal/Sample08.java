@@ -21,7 +21,7 @@ public class Sample08 implements NetworkAddedListener, NetworkAboutToBeDestroyed
 
 	public void handleEvent(NetworkAddedEvent e){
 		System.out.println("Sample08: NetworkAddedEvent is received");
-		System.out.println("\tnetwork name is "+ e.getNetwork().getCyRow().get("name", String.class));
+		System.out.println("\tnetwork name is "+ e.getNetwork().getCyRow(e.getNetwork()).get("name", String.class));
 	}
 
 	public void handleEvent(NetworkAboutToBeDestroyedEvent e){
