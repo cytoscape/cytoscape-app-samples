@@ -16,7 +16,7 @@ public class AddImageIconAction extends AbstractCyAction {
 	public AddImageIconAction(CyApplicationManager applicationManager, CySwingApplication desktopApp){
 		// Add a menu item -- Plugins->sample03
 		super("sample03", applicationManager);
-		setPreferredMenu("Plugins");
+		setPreferredMenu("App");
 
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
 		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));

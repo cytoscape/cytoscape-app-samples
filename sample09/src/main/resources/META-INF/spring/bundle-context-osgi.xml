@@ -14,7 +14,7 @@
 		interface="org.cytoscape.work.TaskFactory">
 		<osgi:service-properties>
 			<entry key="title" value="Sample 9" />
-			<entry key="preferredMenu" value="Plugins" />
+			<entry key="preferredMenu" value="App" />
 			<entry key="menuGravity" value="16.0" />
 		</osgi:service-properties>
 	</osgi:service>

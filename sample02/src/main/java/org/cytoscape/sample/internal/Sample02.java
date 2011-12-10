@@ -20,7 +20,7 @@ public class Sample02 extends AbstractCyAction {
 			MyCytoPanel myCytoPanel){
 		// Add a menu item -- Plugins->sample02
 		super("sample02", applicationManager);
-		setPreferredMenu("Plugins");
+		setPreferredMenu("App");
 
 		this.desktopApp = desktopApp;
 		

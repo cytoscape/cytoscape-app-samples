@@ -29,7 +29,7 @@ public class CyActivator extends AbstractCyActivator {
 		
 		
 		Properties sample09TaskFactoryProps = new Properties();
-		sample09TaskFactoryProps.setProperty("preferredMenu","Plugins");
+		sample09TaskFactoryProps.setProperty("preferredMenu","Apps");
 		sample09TaskFactoryProps.setProperty("menuGravity","16.0");
 		sample09TaskFactoryProps.setProperty("title","Sample 9");
 		registerService(bc,sample09TaskFactory,TaskFactory.class, sample09TaskFactoryProps);

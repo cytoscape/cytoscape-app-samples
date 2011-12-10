@@ -62,7 +62,7 @@ public class Sample03aAction extends AbstractCyAction {
 				
 		// Add a menu item at Plugins->Sample03a	
 		super("Sample03a", adapter.getCyApplicationManager());
-		setPreferredMenu("Plugins");		
+		setPreferredMenu("App");		
 		
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
 		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));

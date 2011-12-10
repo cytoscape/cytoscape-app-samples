@@ -16,7 +16,7 @@ public class Sample05aPlugin extends AbstractCyPlugin {
 		
 		Dictionary<String, String> dict = new Hashtable<String, String>();
 		dict.put("title", "Sample5a");
-		dict.put("preferredMenu", "Plugins");
+		dict.put("preferredMenu", "App");
 		dict.put("menuGravity", "12.0");
 
 		a.getCyServiceRegistrar().registerService( new Sample05aTaskFactory(a), TaskFactory.class, dict);

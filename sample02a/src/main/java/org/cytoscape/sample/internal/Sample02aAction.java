@@ -58,7 +58,7 @@ public class Sample02aAction extends AbstractCyAction {
 	public Sample02aAction(CyPluginAdapter adapter) {
 		// Add a menu item at Plugins->Sample02a	
 		super("Sample02a", adapter.getCyApplicationManager());
-		setPreferredMenu("Plugins");
+		setPreferredMenu("App");
 	}
 
 	/**
