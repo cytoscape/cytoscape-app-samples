@@ -17,22 +17,16 @@ import java.util.Properties;
 
 
 public class CyActivator extends AbstractCyActivator {
+
 	public CyActivator() {
 		super();
 	}
 
 
 	public void start(BundleContext bc) {
-
-		CyApplicationManager cyApplicationManagerService = getService(bc,CyApplicationManager.class);
 		CySwingApplication cytoscapeDesktopService = getService(bc,CySwingApplication.class);
-		
-		AddImageIconAction addImageIconAction = new AddImageIconAction(cyApplicationManagerService,cytoscapeDesktopService);
-		
-				registerService(bc,addImageIconAction,CyAction.class, new Properties());
-
-		
-
+		AddImageIconAction addImageIconAction = new AddImageIconAction(cytoscapeDesktopService);
+		registerService(bc,addImageIconAction,CyAction.class, new Properties());
 	}
 }
 

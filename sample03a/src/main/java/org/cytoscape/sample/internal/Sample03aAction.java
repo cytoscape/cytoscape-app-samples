@@ -47,7 +47,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
 import org.cytoscape.application.swing.AbstractCyAction;
-import org.cytoscape.plugin.CyPluginAdapter;
 
 /**
  *
@@ -58,10 +57,10 @@ public class Sample03aAction extends AbstractCyAction {
 	/**
 	 * Creates a new action object.
 	 */
-	public Sample03aAction(CyPluginAdapter adapter) {
+	public Sample03aAction() {
 				
 		// Add a menu item at Plugins->Sample03a	
-		super("Sample03a", adapter.getCyApplicationManager());
+		super("Sample03a");
 		setPreferredMenu("App");		
 		
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));

@@ -12,7 +12,7 @@ public class Sample03aPlugin extends AbstractCyPlugin {
 	public Sample03aPlugin(CyPluginAdapter a){
 		super(a);
 		
-		a.getCySwingApplication().addAction(new Sample03aAction(a));
+		a.getCySwingApplication().addAction(new Sample03aAction());
 		
 	}
 }

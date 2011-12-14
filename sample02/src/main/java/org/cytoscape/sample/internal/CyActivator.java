@@ -1,7 +1,6 @@
 package org.cytoscape.sample.internal;
 
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.application.CyApplicationManager;
 
 import org.cytoscape.sample.internal.MyCytoPanel;
 import org.cytoscape.sample.internal.Sample02;
@@ -24,11 +23,10 @@ public class CyActivator extends AbstractCyActivator {
 
 	public void start(BundleContext bc) {
 
-		CyApplicationManager cyApplicationManagerService = getService(bc,CyApplicationManager.class);
 		CySwingApplication cytoscapeDesktopService = getService(bc,CySwingApplication.class);
 		
 		MyCytoPanel myCytoPanel = new MyCytoPanel();
-		Sample02 sample02Action = new Sample02(cyApplicationManagerService,cytoscapeDesktopService,myCytoPanel);
+		Sample02 sample02Action = new Sample02(cytoscapeDesktopService,myCytoPanel);
 		
 		registerService(bc,myCytoPanel,CytoPanelComponent.class, new Properties());
 		registerService(bc,sample02Action,CyAction.class, new Properties());
