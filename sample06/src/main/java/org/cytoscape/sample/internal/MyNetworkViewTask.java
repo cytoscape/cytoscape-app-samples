@@ -30,7 +30,7 @@ public class MyNetworkViewTask extends AbstractTask {
 				return;
 			}
 
-			if(networkViewManager.getNetworkView(currNet.getSUID()) == null){
+			if(networkViewManager.getNetworkView(currNet) == null){
 				// create a new view for current network
 				CyNetworkView myView = cnvf.createNetworkView(currNet);
 				networkViewManager.addNetworkView(myView);				
@@ -44,7 +44,7 @@ public class MyNetworkViewTask extends AbstractTask {
 			if(destroyView)
 			{
 				CyNetwork currNetwork = appMgr.getCurrentNetwork();
-				CyNetworkView view = networkViewManager.getNetworkView(currNetwork.getSUID());
+				CyNetworkView view = networkViewManager.getNetworkView(currNetwork);
 				networkViewManager.destroyNetworkView(view);				
 			}
 		}
