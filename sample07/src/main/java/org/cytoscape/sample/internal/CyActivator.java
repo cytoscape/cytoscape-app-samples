@@ -25,7 +25,7 @@ public class CyActivator extends AbstractCyActivator {
 
 		CyApplicationManager cyApplicationManagerService = getService(bc,CyApplicationManager.class);
 		
-		Sample07TaskFactory sample07TaskFactory = new Sample07TaskFactory();
+		Sample07TaskFactory sample07TaskFactory = new Sample07TaskFactory(cyApplicationManagerService);
 		
 		
 		Properties sample07TaskFactoryProps = new Properties();
