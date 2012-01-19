@@ -11,9 +11,9 @@ public class Sample04 extends AbstractCyAction {
 	private CySwingApplication desktopApp;
 
 	public Sample04(CySwingApplication desktopApp){
-		// Add a sub-menu item -- Plugins->Sample04->sample04
+		// Add a sub-menu item -- Apps->Sample04->sample04
 		super("sample04...");
-		setPreferredMenu("Plugins.Sample04");
+		setPreferredMenu("Apps.Sample04");
 		//setMenuGravity(2.0f);
 		
 		this.desktopApp = desktopApp;
