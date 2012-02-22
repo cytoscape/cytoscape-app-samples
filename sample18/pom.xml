@@ -1,21 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<artifactId>parent</artifactId>
-		<groupId>org.cytoscape.sample</groupId>
-		<version>3.0.0-alpha7-SNAPSHOT</version>
-	</parent>
-	
+
 	<properties>
 		<bundle.symbolicName>sample18</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
+		<cytoscape.api.version>3.0.0-alpha8-SNAPSHOT</cytoscape.api.version>
+		
+		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
+		<osgi.api.version>4.2.0</osgi.api.version>
 	</properties>
-	
+
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample18</artifactId>
 	<packaging>bundle</packaging>
 	<name>${bundle.symbolicName}</name>
-  
+
+	<version>0.0.1</version>
+	  
   	<repositories>
 		<repository>
 			<id>cytoscape_snapshots</id>
