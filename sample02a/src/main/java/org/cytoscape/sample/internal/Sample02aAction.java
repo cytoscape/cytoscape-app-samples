@@ -56,9 +56,9 @@ public class Sample02aAction extends AbstractCyAction {
 	 * Creates a new action object.
 	 */
 	public Sample02aAction() {
-		// Add a menu item at Plugins->Sample02a	
+		// Add a menu item at Apps -> Sample02a	
 		super("Sample02a");
-		setPreferredMenu("App");
+		setPreferredMenu("Apps");
 	}
 
 	/**
