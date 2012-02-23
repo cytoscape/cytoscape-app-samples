@@ -7,7 +7,7 @@ import org.cytoscape.view.layout.AbstractBasicLayoutTask;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.View;
 import org.cytoscape.view.model.VisualProperty;
-import org.cytoscape.view.presentation.property.MinimalVisualLexicon;
+import org.cytoscape.view.presentation.property.BasicVisualLexicon;
 import org.cytoscape.work.TaskMonitor;
 import java.util.Random;
 
@@ -35,8 +35,8 @@ public class MyLayoutTask extends AbstractBasicLayoutTask {
 		double currX = 0.0d;
 		double currY = 0.0d;
 		
-		final VisualProperty<Double> xLoc = MinimalVisualLexicon.NODE_X_LOCATION;
-		final VisualProperty<Double> yLoc = MinimalVisualLexicon.NODE_Y_LOCATION;
+		final VisualProperty<Double> xLoc = BasicVisualLexicon.NODE_X_LOCATION;
+		final VisualProperty<Double> yLoc = BasicVisualLexicon.NODE_Y_LOCATION;
 		
 		Random randomGenerator = new Random();
 		
