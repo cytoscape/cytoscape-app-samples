@@ -1,13 +1,13 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.plugin.CyPluginAdapter;
+import org.cytoscape.app.CyAppAdapter;
 import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;
 
 public class Sample05aTaskFactory implements TaskFactory {
 
-	private CyPluginAdapter a;
-	public Sample05aTaskFactory(CyPluginAdapter a){
+	private CyAppAdapter a;
+	public Sample05aTaskFactory(CyAppAdapter a){
 		this.a = a;
 	}
 	

@@ -27,7 +27,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Cytoscape-App>org.cytoscape.sample.internal.Sample05aPlugin</Cytoscape-App>
+              <Cytoscape-App>org.cytoscape.sample.internal.Sample05aApp</Cytoscape-App>
             </manifestEntries>
           </archive>
         </configuration>

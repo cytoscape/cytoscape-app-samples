@@ -3,15 +3,15 @@ package org.cytoscape.sample.internal;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.CyTableEntry;
-import org.cytoscape.plugin.CyPluginAdapter;
+import org.cytoscape.app.CyAppAdapter;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
 
 public class Sample05aTask extends AbstractTask {
 
-	private CyPluginAdapter adapter;
+	private CyAppAdapter adapter;
 	
-	public Sample05aTask(CyPluginAdapter a) {
+	public Sample05aTask(CyAppAdapter a) {
 		this.adapter = a;
 	}
 	
