@@ -30,13 +30,11 @@ public class Sample05aTask extends AbstractTask {
 				
 		adapter.getCyNetworkManager().addNetwork(myNet);
 		
-		//// The following code will destroy a network
+		//// The following code will destroy the network
 		boolean destroyNetwork = false;
 		if (destroyNetwork){
-			// Get current network
-			CyNetwork currNet = adapter.getCyApplicationManager().getCurrentNetwork();
 			// Destroy it
-			 adapter.getCyNetworkManager().destroyNetwork(currNet);			
+			 adapter.getCyNetworkManager().destroyNetwork(myNet);			
 		}
 	}
 }
