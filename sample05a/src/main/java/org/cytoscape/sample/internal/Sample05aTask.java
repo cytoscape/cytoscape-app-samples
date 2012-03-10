@@ -25,6 +25,10 @@ public class Sample05aTask extends AbstractTask {
 		CyNode node1 = myNet.addNode();
 		CyNode node2 = myNet.addNode();
 		
+		// set name attribute for new nodes
+		myNet.getDefaultNodeTable().getRow(node1.getSUID()).set("name", "Node1");
+		myNet.getDefaultNodeTable().getRow(node2.getSUID()).set("name", "Node2");
+		
 		// Add an edge
 		myNet.addEdge(node1, node2, true);
 				
