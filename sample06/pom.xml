@@ -15,7 +15,6 @@
 	<packaging>bundle</packaging>
 	<name>${bundle.symbolicName}</name>
 
-	<version>0.0.1</version>
   
   	<repositories>
 		<repository>
@@ -42,7 +41,8 @@
 		</repository>
 	</repositories>
 
-	<build>
+  	<version>3.0.0-alpha8-SNAPSHOT</version>
+  	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
