@@ -3,6 +3,7 @@ package org.cytoscape.sample.internal;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;
+import org.cytoscape.model.CyNetwork;
 
 public class Sample12TaskFactory implements TaskFactory {
 
@@ -13,6 +14,6 @@ public class Sample12TaskFactory implements TaskFactory {
 	}
 	
 	public TaskIterator createTaskIterator(){
-		return new TaskIterator(new DeleteAttributeTask(appMgr));
+		return new TaskIterator(new DeleteAttributeTask(this.appMgr.getCurrentNetwork()));
 	}
 }
