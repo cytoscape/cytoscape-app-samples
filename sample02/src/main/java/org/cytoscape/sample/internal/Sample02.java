@@ -1,12 +1,12 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.application.swing.CytoPanel;
 import org.cytoscape.application.swing.CytoPanelName;
 import org.cytoscape.application.swing.CytoPanelState;
-import org.cytoscape.session.CyApplicationManager;
 
 
 public class Sample02 extends AbstractCyAction {
@@ -15,11 +15,11 @@ public class Sample02 extends AbstractCyAction {
 	private final CytoPanel cytoPanelWest;
 	private MyCytoPanel myCytoPanel;
 	
-	public Sample02(CyApplicationManager applicationManager, CySwingApplication desktopApp,
+	public Sample02(CySwingApplication desktopApp,
 			MyCytoPanel myCytoPanel){
-		// Add a menu item -- Plugins->sample02
-		super("sample02", applicationManager);
-		setPreferredMenu("Plugins");
+		// Add a menu item -- Apps->sample02
+		super("sample02");
+		setPreferredMenu("Apps");
 
 		this.desktopApp = desktopApp;
 		

@@ -15,7 +15,7 @@ import java.util.List;
 public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedListener {
 
 
-	// Save plugin state in a file
+	// Save app state in a file
 	public void handleEvent(SessionAboutToBeSavedEvent e){
 	
 		String tmpDir = System.getProperty("java.io.tmpdir");
@@ -34,7 +34,7 @@ public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedLis
 		ArrayList<File> files = new ArrayList<File>();
 		files.add(propFile);
 		try {
-			e.addPluginFiles("sample21", files);			
+			e.addAppFiles("sample21", files);			
 		}
 		catch (Exception ex){
 			ex.printStackTrace();
@@ -42,14 +42,14 @@ public class Sample21 implements SessionAboutToBeSavedListener, SessionLoadedLis
 	}
 	
 
-	// restore plugin state from a file
+	// restore app state from a file
 	public void handleEvent(SessionLoadedEvent e){
 
-		if (e.getLoadedSession().getPluginFileListMap() == null || e.getLoadedSession().getPluginFileListMap().size() ==0){
+		if (e.getLoadedSession().getAppFileListMap() == null || e.getLoadedSession().getAppFileListMap().size() ==0){
 			return;
 		}
 		
-		List<File> files = e.getLoadedSession().getPluginFileListMap().get("sample21");
+		List<File> files = e.getLoadedSession().getAppFileListMap().get("sample21");
 
 		if (files == null || files.size() ==0){
 			return;

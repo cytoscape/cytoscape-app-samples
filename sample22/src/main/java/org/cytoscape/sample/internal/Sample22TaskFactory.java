@@ -10,7 +10,7 @@ public class Sample22TaskFactory implements TaskFactory {
 		
 	}
 	
-	public TaskIterator getTaskIterator() {
+	public TaskIterator createTaskIterator() {
 		return new TaskIterator(new MyTask());
 	}
 	

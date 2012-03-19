@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.0.xsd">
 
 	<!--
@@ -14,7 +14,7 @@
 
 
 	<!-- imports -->
-	<osgi:reference id="cyApplicationManagerService" interface="org.cytoscape.session.CyApplicationManager" />			
+	<osgi:reference id="cyApplicationManagerService" interface="org.cytoscape.application.CyApplicationManager" />			
 	<osgi:reference id="cyNetworkManagerServiceRef" interface="org.cytoscape.model.CyNetworkManager" />		
 	<osgi:reference id="cyDataTableFactoryServiceRef" interface="org.cytoscape.model.CyTableFactory" />
 				
@@ -24,7 +24,7 @@
 		interface="org.cytoscape.work.TaskFactory">
 		<osgi:service-properties>
 			<entry key="title" value="Sample 11" />
-			<entry key="preferredMenu" value="Plugins" />
+			<entry key="preferredMenu" value="App" />
 			<entry key="menuGravity" value="12.0" />
 		</osgi:service-properties>
 	</osgi:service>

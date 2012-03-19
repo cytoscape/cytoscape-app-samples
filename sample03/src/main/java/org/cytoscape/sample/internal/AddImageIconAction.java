@@ -3,19 +3,19 @@ package org.cytoscape.sample.internal;
 import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
+
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.session.CyApplicationManager;
 import javax.swing.JOptionPane;
 
 public class AddImageIconAction extends AbstractCyAction {
 
 	private CySwingApplication desktopApp;
 	
-	public AddImageIconAction(CyApplicationManager applicationManager, CySwingApplication desktopApp){
+	public AddImageIconAction(CySwingApplication desktopApp){
 		// Add a menu item -- Plugins->sample03
-		super("sample03", applicationManager);
-		setPreferredMenu("Plugins");
+		super("sample03");
+		setPreferredMenu("Apps");
 
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
 		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));

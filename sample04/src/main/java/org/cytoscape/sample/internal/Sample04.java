@@ -1,19 +1,19 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.session.CyApplicationManager;
 import javax.swing.JOptionPane;
 
 public class Sample04 extends AbstractCyAction {
 
 	private CySwingApplication desktopApp;
 
-	public Sample04(CyApplicationManager appMgr, CySwingApplication desktopApp){
-		// Add a sub-menu item -- Plugins->Sample04->sample04
-		super("sample04...", appMgr);
-		setPreferredMenu("Plugins.Sample04");
+	public Sample04(CySwingApplication desktopApp){
+		// Add a sub-menu item -- Apps->Sample04->sample04
+		super("sample04...");
+		setPreferredMenu("Apps.Sample04");
 		//setMenuGravity(2.0f);
 		
 		this.desktopApp = desktopApp;

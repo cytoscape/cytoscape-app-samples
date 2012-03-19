@@ -15,7 +15,7 @@ public class Sample14 extends AbstractWebServiceClient implements
 	}
 
 	@Override
-	public TaskIterator getTaskIterator() {
+	public TaskIterator createTaskIterator() {
 		ImportNetworkTask importTask = new ImportNetworkTask();
 		return new TaskIterator(importTask);
 	}

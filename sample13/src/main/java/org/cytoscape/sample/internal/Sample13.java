@@ -25,7 +25,7 @@ public class Sample13 {
 	}
 	
 	public void doSomethingWithClient() {
-		client.getTaskIterator();
+		client.createTaskIterator();
 	}
 
 }
