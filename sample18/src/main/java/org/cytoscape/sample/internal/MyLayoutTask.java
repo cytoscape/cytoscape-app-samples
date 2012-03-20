@@ -1,10 +1,7 @@
 package org.cytoscape.sample.internal;
 
-import java.util.Set;
-import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.view.layout.AbstractBasicLayoutTask;
-import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.View;
 import org.cytoscape.view.model.VisualProperty;
 import org.cytoscape.view.presentation.property.BasicVisualLexicon;
@@ -16,12 +13,11 @@ public class MyLayoutTask extends AbstractBasicLayoutTask {
 	private int XRange;
 	private int YRange;
 	
-	public MyLayoutTask(final CyNetworkView networkView, final String name,
-			  final boolean selectedOnly, final Set<View<CyNode>> staticNodes, int XRange, int YRange){
-		super(networkView, name, selectedOnly, staticNodes);
+	public MyLayoutTask(final MyLayoutContext context, final String name){
+		super(name, context);
 	
-		this.XRange = XRange;
-		this.YRange = YRange;
+		this.XRange = context.XRange;
+		this.YRange = context.YRange;
 
 	}
 	

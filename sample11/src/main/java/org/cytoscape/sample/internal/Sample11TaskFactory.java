@@ -4,10 +4,10 @@ import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyTableFactory;
 import org.cytoscape.model.subnetwork.CyRootNetworkManager;
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class Sample11TaskFactory implements TaskFactory {
+public class Sample11TaskFactory extends AbstractTaskFactory {
 	
 	private CyTableFactory tableFactory;
 	private CyApplicationManager appMgr;

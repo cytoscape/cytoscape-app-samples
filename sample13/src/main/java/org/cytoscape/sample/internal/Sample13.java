@@ -25,7 +25,8 @@ public class Sample13 {
 	}
 	
 	public void doSomethingWithClient() {
-		client.createTaskIterator();
+		String query = "p53";
+		client.createTaskIterator(query);
 	}
 
 }

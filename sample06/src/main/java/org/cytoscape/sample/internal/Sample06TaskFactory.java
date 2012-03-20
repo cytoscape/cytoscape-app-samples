@@ -5,10 +5,10 @@ import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.session.CyNetworkNaming;
 import org.cytoscape.view.model.CyNetworkViewFactory;
 import org.cytoscape.view.model.CyNetworkViewManager;
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class Sample06TaskFactory implements TaskFactory {
+public class Sample06TaskFactory extends AbstractTaskFactory {
 
 	private final CyNetworkFactory cnf;
 	private final CyNetworkViewFactory cnvf;

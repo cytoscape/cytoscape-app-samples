@@ -1,7 +1,5 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.work.undo.UndoSupport;
-
 import org.cytoscape.sample.internal.MyLayout;
 
 import org.cytoscape.view.layout.CyLayoutAlgorithm;
@@ -23,9 +21,7 @@ public class CyActivator extends AbstractCyActivator {
 
 	public void start(BundleContext bc) {
 
-		UndoSupport undoSupportServiceRef = getService(bc,UndoSupport.class);
-		
-		MyLayout myLayout = new MyLayout(undoSupportServiceRef);
+		MyLayout myLayout = new MyLayout();
 		
 		
 		Properties myLayoutProps = new Properties();

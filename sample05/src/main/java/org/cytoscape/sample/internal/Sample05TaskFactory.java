@@ -3,10 +3,10 @@ package org.cytoscape.sample.internal;
 import org.cytoscape.model.CyNetworkFactory;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.session.CyNetworkNaming;
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class Sample05TaskFactory implements TaskFactory {
+public class Sample05TaskFactory extends AbstractTaskFactory {
 	private final CyNetworkManager netMgr;
 	private final CyNetworkFactory cnf;
 	private final CyNetworkNaming namingUtil; 

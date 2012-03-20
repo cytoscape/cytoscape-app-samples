@@ -1,10 +1,10 @@
 package org.cytoscape.sample.internal;
 
 import org.cytoscape.app.CyAppAdapter;
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class Sample05aTaskFactory implements TaskFactory {
+public class Sample05aTaskFactory extends AbstractTaskFactory {
 
 	private CyAppAdapter a;
 	public Sample05aTaskFactory(CyAppAdapter a){

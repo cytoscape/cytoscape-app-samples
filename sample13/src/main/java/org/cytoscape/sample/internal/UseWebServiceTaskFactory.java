@@ -1,9 +1,9 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class UseWebServiceTaskFactory implements TaskFactory {
+public class UseWebServiceTaskFactory extends AbstractTaskFactory {
 
 	private final WebServiceHelper wsh;
 	public UseWebServiceTaskFactory(WebServiceHelper wsh){

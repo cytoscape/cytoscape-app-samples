@@ -1,10 +1,10 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
 
-public class Sample22TaskFactory implements TaskFactory {
+public class Sample22TaskFactory extends AbstractTaskFactory {
 
 	public Sample22TaskFactory(){
 		
