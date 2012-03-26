@@ -8,7 +8,7 @@ import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyNode;
 import org.cytoscape.model.CyRow;
 import org.cytoscape.model.CyTable;
-import org.cytoscape.model.CyTableEntry;
+import org.cytoscape.model.CyIdentifiable;
 import org.cytoscape.model.CyTableFactory;
 import org.cytoscape.task.MapNetworkAttrTask;
 import org.cytoscape.work.AbstractTask;
@@ -52,7 +52,7 @@ public class CreateTableTask extends AbstractTask {
 		row.set(attributeNmae, new Integer(4));
 
 		// We are loading node attribute
-		Class<? extends CyTableEntry> type = CyNode.class;
+		Class<? extends CyIdentifiable> type = CyNode.class;
 
 		// Step 3: pass the new table to MapNetworkAttrTask
 		super.insertTasksAfterCurrentTask( new MapNetworkAttrTask(type,table,netMgr,appMgr,rootNetworkManager) );

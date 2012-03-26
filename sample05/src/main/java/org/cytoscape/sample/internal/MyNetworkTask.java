@@ -4,7 +4,7 @@ import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNetworkFactory;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyNode;
-import org.cytoscape.model.CyTableEntry;
+import org.cytoscape.model.CyIdentifiable;
 import org.cytoscape.session.CyNetworkNaming;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
@@ -24,7 +24,7 @@ public class MyNetworkTask extends AbstractTask {
 	public void run(TaskMonitor monitor) {
 		// Create an empty network
 		CyNetwork myNet = cnf.createNetwork();
-		myNet.getRow(myNet).set(CyTableEntry.NAME,
+		myNet.getRow(myNet).set(CyNetwork.NAME,
 				      namingUtil.getSuggestedNetworkTitle("My Network"));
 		
 		// Add two nodes to the network
