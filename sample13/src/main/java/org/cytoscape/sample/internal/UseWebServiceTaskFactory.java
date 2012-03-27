@@ -10,7 +10,6 @@ public class UseWebServiceTaskFactory extends AbstractTaskFactory {
 		this.wsh = wsh;
 	}
 	
-	@Override
 	public TaskIterator createTaskIterator(){
 		return new TaskIterator(new UseWebServiceTask(wsh));
 	}
