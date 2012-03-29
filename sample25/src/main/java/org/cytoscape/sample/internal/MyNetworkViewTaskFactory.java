@@ -17,7 +17,7 @@ public class MyNetworkViewTaskFactory extends AbstractNetworkViewTaskFactory {
 	
 	
 	public TaskIterator createTaskIterator(CyNetworkView view) {
-		return new TaskIterator(new MyTask(this.applicationManager.getCurrentNetworkView()) );
+		return new TaskIterator(new MyNetworkViewTask(this.applicationManager.getCurrentNetworkView()) );
 	}
 
 }
