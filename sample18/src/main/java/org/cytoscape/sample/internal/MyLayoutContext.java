@@ -1,16 +1,10 @@
 package org.cytoscape.sample.internal;
 
-import java.util.Set;
-
-import org.cytoscape.view.layout.AbstractLayoutAlgorithmContext;
+import org.cytoscape.view.layout.AbstractLayoutContext;
 import org.cytoscape.work.Tunable;
 import org.cytoscape.work.TunableValidator;
 
-public class MyLayoutContext extends AbstractLayoutAlgorithmContext implements TunableValidator {
-
-	public MyLayoutContext(boolean supportsSelectedOnly, Set<Class<?>> supportedNodeAttributes, Set<Class<?>> supportedEdgeAttributes) {
-		super(supportsSelectedOnly, supportedNodeAttributes, supportedEdgeAttributes);
-	}
+public class MyLayoutContext extends AbstractLayoutContext implements TunableValidator {
 
 	@Tunable(description="Shift X Range")
 	public int XRange = 100; // Default value

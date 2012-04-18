@@ -1,24 +1,27 @@
 package org.cytoscape.sample.internal;
 
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+
 import org.cytoscape.model.CyNode;
-import org.cytoscape.view.layout.AbstractBasicLayoutTask;
+import org.cytoscape.view.layout.AbstractLayoutTask;
+import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.View;
 import org.cytoscape.view.model.VisualProperty;
 import org.cytoscape.view.presentation.property.BasicVisualLexicon;
 import org.cytoscape.work.TaskMonitor;
-import java.util.Random;
 
-public class MyLayoutTask extends AbstractBasicLayoutTask {
+public class MyLayoutTask extends AbstractLayoutTask {
 
 	private int XRange;
 	private int YRange;
 	
-	public MyLayoutTask(final MyLayoutContext context, final String name){
-		super(name, context);
+	public MyLayoutTask(final String name, CyNetworkView networkView, final MyLayoutContext context, Set<View<CyNode>> nodesToLayOut, Set<Class<?>> supportedNodeAttributeTypes, Set<Class<?>> supportedEdgeAttributeTypes, List<String> initialAttributes) {
+		super(name, networkView, nodesToLayOut, supportedNodeAttributeTypes, supportedEdgeAttributeTypes, initialAttributes);
 	
 		this.XRange = context.XRange;
 		this.YRange = context.YRange;
-
 	}
 	
 	/**
@@ -37,10 +40,7 @@ public class MyLayoutTask extends AbstractBasicLayoutTask {
 		Random randomGenerator = new Random();
 		
 		// Set visual property.
-		for (final View<CyNode> nView : networkView.getNodeViews() ) {
-
-			if (isLocked(nView))
-				continue;
+		for (final View<CyNode> nView : nodesToLayOut ) {
 
 			// Shift current nodeView to a new position based on a random value
 			currX = nView.getVisualProperty(xLoc) + XRange*randomGenerator.nextDouble();
