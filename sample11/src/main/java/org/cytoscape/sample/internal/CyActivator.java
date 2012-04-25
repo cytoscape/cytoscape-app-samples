@@ -10,7 +10,7 @@ import org.cytoscape.work.TaskFactory;
 import org.osgi.framework.BundleContext;
 
 import org.cytoscape.service.util.AbstractCyActivator;
-import org.cytoscape.task.edit.MapNetworkAttrTaskFactory;
+import org.cytoscape.task.edit.MapTableToNetworkTablesTaskFactory;
 
 import java.util.Properties;
 
@@ -25,7 +25,7 @@ public class CyActivator extends AbstractCyActivator {
 	public void start(BundleContext bc) {
 
 		CyTableFactory cyDataTableFactoryServiceRef = getService(bc,CyTableFactory.class);
-		MapNetworkAttrTaskFactory mapNetworkAttrTFServiceRef = getService(bc,MapNetworkAttrTaskFactory.class);
+		MapTableToNetworkTablesTaskFactory mapNetworkAttrTFServiceRef = getService(bc,MapTableToNetworkTablesTaskFactory.class);
 	
 		
 		Sample11TaskFactory sample11TaskFactory = new Sample11TaskFactory(cyDataTableFactoryServiceRef,mapNetworkAttrTFServiceRef);

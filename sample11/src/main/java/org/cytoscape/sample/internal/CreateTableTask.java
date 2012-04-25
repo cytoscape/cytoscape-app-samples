@@ -8,7 +8,7 @@ import org.cytoscape.model.CyRow;
 import org.cytoscape.model.CyTable;
 import org.cytoscape.model.CyIdentifiable;
 import org.cytoscape.model.CyTableFactory;
-import org.cytoscape.task.edit.MapNetworkAttrTaskFactory;
+import org.cytoscape.task.edit.MapTableToNetworkTablesTaskFactory;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
 
@@ -17,9 +17,9 @@ public class CreateTableTask extends AbstractTask {
 	private static int numImports = 0;
 	
 	private CyTableFactory tableFactory;
-	private MapNetworkAttrTaskFactory mapNetworkAttrTF;
+	private MapTableToNetworkTablesTaskFactory mapNetworkAttrTF;
 	
-	public CreateTableTask(CyTableFactory tableFactory, MapNetworkAttrTaskFactory mapNetworkAttrTF){
+	public CreateTableTask(CyTableFactory tableFactory, MapTableToNetworkTablesTaskFactory mapNetworkAttrTF){
 		this.tableFactory = tableFactory;
 		this.mapNetworkAttrTF = mapNetworkAttrTF;
 	}
