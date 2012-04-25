@@ -1,7 +1,7 @@
 package org.cytoscape.sample.internal;
 
 import org.cytoscape.model.CyTableFactory;
-import org.cytoscape.task.table.MapNetworkAttrTaskFactory;
+import org.cytoscape.task.edit.MapNetworkAttrTaskFactory;
 import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
