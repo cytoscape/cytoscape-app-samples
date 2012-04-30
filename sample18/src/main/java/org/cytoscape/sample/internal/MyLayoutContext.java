@@ -1,10 +1,9 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.view.layout.AbstractLayoutContext;
 import org.cytoscape.work.Tunable;
 import org.cytoscape.work.TunableValidator;
 
-public class MyLayoutContext extends AbstractLayoutContext implements TunableValidator {
+public class MyLayoutContext  implements TunableValidator {
 
 	@Tunable(description="Shift X Range")
 	public int XRange = 100; // Default value

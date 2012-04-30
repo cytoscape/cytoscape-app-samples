@@ -7,22 +7,23 @@ import org.cytoscape.view.layout.AbstractLayoutAlgorithm;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.View;
 import org.cytoscape.work.TaskIterator;
+import org.cytoscape.work.undo.UndoSupport;
 
-public class MyLayout extends AbstractLayoutAlgorithm<MyLayoutContext> {
+public class MyLayout extends AbstractLayoutAlgorithm {
 
 	
 	/**
 	 * Creates a new MyLayout object.
 	 */
-	public MyLayout() {
-		super("computer name","human name");
+	public MyLayout(UndoSupport undo) {
+		super("computer name","human name", undo);
 	}
 	
-	public TaskIterator createTaskIterator(CyNetworkView networkView, MyLayoutContext context, Set<View<CyNode>> nodesToLayOut) {
-		return new TaskIterator(new MyLayoutTask(getName(), networkView, context, nodesToLayOut, getSupportedNodeAttributeTypes(), getSupportedEdgeAttributeTypes(), getInitialAttributeList()));
+	public TaskIterator createTaskIterator(CyNetworkView networkView, Object context, Set<View<CyNode>> nodesToLayOut, String attrName) {
+		return new TaskIterator(new MyLayoutTask(getName(), networkView, (MyLayoutContext)context, nodesToLayOut,attrName, undoSupport));
 	}
 
-	public MyLayoutContext createLayoutContext() {
+	public Object createLayoutContext() {
 		return new MyLayoutContext();
 	}
 }

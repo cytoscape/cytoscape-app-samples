@@ -1,6 +1,5 @@
 package org.cytoscape.sample.internal;
 
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -11,14 +10,15 @@ import org.cytoscape.view.model.View;
 import org.cytoscape.view.model.VisualProperty;
 import org.cytoscape.view.presentation.property.BasicVisualLexicon;
 import org.cytoscape.work.TaskMonitor;
+import org.cytoscape.work.undo.UndoSupport;
 
 public class MyLayoutTask extends AbstractLayoutTask {
 
 	private int XRange;
 	private int YRange;
 	
-	public MyLayoutTask(final String name, CyNetworkView networkView, final MyLayoutContext context, Set<View<CyNode>> nodesToLayOut, Set<Class<?>> supportedNodeAttributeTypes, Set<Class<?>> supportedEdgeAttributeTypes, List<String> initialAttributes) {
-		super(name, networkView, nodesToLayOut, supportedNodeAttributeTypes, supportedEdgeAttributeTypes, initialAttributes);
+	public MyLayoutTask(final String name, CyNetworkView networkView, final MyLayoutContext context, Set<View<CyNode>> nodesToLayOut, String attrName, UndoSupport undo) {
+		super(name, networkView, nodesToLayOut, attrName, undo);
 	
 		this.XRange = context.XRange;
 		this.YRange = context.YRange;
