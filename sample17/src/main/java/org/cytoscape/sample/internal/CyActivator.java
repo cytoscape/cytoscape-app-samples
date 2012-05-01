@@ -1,11 +1,12 @@
 package org.cytoscape.sample.internal;
 
 import org.osgi.framework.BundleContext;
+import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.service.util.AbstractCyActivator;
-import org.cytoscape.task.creation.LoadVisualStyles;
+import org.cytoscape.task.read.LoadVizmapFileTaskFactory;
+import org.cytoscape.task.visualize.ApplyVisualStyleTaskFactory;
 import org.cytoscape.work.TaskFactory;
 import java.util.Properties;
-
 
 
 public class CyActivator extends AbstractCyActivator {
@@ -16,9 +17,12 @@ public class CyActivator extends AbstractCyActivator {
 
 	public void start(BundleContext bc) {
 
-		LoadVisualStyles loadVizmapFileTaskFactory =  getService(bc,LoadVisualStyles.class);
+		CyApplicationManager cyApplicationManagerServiceRef = getService(bc,CyApplicationManager.class);
+		LoadVizmapFileTaskFactory loadVizmapFileTaskFactory =  getService(bc,LoadVizmapFileTaskFactory.class);
+		ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory = getService(bc,ApplyVisualStyleTaskFactory.class);
 		
-		LoadVisualPropertiesTaskFactory lvp= new LoadVisualPropertiesTaskFactory(loadVizmapFileTaskFactory);
+		LoadVisualPropertiesTaskFactory lvp= new LoadVisualPropertiesTaskFactory(loadVizmapFileTaskFactory,
+				cyApplicationManagerServiceRef, applyVisualStyleTaskFactory);
 		
 		Properties sample17Props = new Properties();
 		sample17Props.setProperty("preferredMenu","Apps");

@@ -1,22 +1,26 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.task.creation.LoadVisualStyles;
-import org.cytoscape.work.TaskFactory;
+import org.cytoscape.application.CyApplicationManager;
+import org.cytoscape.task.read.LoadVizmapFileTaskFactory;
+import org.cytoscape.task.visualize.ApplyVisualStyleTaskFactory;
+import org.cytoscape.work.AbstractTaskFactory;
 import org.cytoscape.work.TaskIterator;
 
-public class LoadVisualPropertiesTaskFactory implements TaskFactory {
+public class LoadVisualPropertiesTaskFactory extends AbstractTaskFactory {
 
-
-	private final LoadVisualStyles loadVizmapFileTaskFactory;
+	private final LoadVizmapFileTaskFactory loadVizmapFileTaskFactory;
+	private final CyApplicationManager cyApplicationManagerServiceRef;
+	private final ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory;
 	
-	public LoadVisualPropertiesTaskFactory(LoadVisualStyles loadVizmapFileTaskFactory){
+	public LoadVisualPropertiesTaskFactory(LoadVizmapFileTaskFactory loadVizmapFileTaskFactory, CyApplicationManager cyApplicationManagerServiceRef,
+			ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory){
 		this.loadVizmapFileTaskFactory = loadVizmapFileTaskFactory;
+		this.cyApplicationManagerServiceRef = cyApplicationManagerServiceRef;
+		this.applyVisualStyleTaskFactory = applyVisualStyleTaskFactory;
 	}
 	
-	
-	@Override
 	public TaskIterator createTaskIterator(){
-		return new TaskIterator(new LoadVisualPropertiesTask(this.loadVizmapFileTaskFactory));
+		return new TaskIterator(new LoadVisualPropertiesTask(this.loadVizmapFileTaskFactory, this.cyApplicationManagerServiceRef.getCurrentNetworkView(),
+				this.applyVisualStyleTaskFactory));
 	}
-
 }
