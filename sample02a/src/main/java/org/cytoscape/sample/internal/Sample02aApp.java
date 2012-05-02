@@ -1,15 +1,15 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.app.AbstractCyApp;
-import org.cytoscape.app.CyAppAdapter;
+import org.cytoscape.app.swing.AbstractCySwingApp;
+import org.cytoscape.app.swing.CySwingAppAdapter;
 
 /**
  * An implementation of CyPluginAdapter
  */
-public class Sample02aApp extends AbstractCyApp {
+public class Sample02aApp extends AbstractCySwingApp {
 	
-	public Sample02aApp(CyAppAdapter adapter){
-		super(adapter);
-		adapter.getCySwingApplication().addAction(new Sample02aAction());
+	public Sample02aApp(CySwingAppAdapter swingAdapter){
+		super(swingAdapter);
+		swingAdapter.getCySwingApplication().addAction(new Sample02aAction());
 	}
 }
