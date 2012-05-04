@@ -9,6 +9,7 @@ import org.cytoscape.task.visualize.ApplyVisualStyleTaskFactory;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.work.TaskIterator;
 import java.io.File;
+import java.util.HashSet;
 import java.util.Set;
 
 public class LoadVisualPropertiesTask extends AbstractTask {
@@ -21,28 +22,26 @@ public class LoadVisualPropertiesTask extends AbstractTask {
 	private final ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory;
 
 	public LoadVisualPropertiesTask(LoadVizmapFileTaskFactory loadVizmapFileTaskFactory, CyNetworkView view,
-			ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory){
+			ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory) {
 		this.loadVizmapFileTaskFactory = loadVizmapFileTaskFactory;
 		this.view = view;
 		this.applyVisualStyleTaskFactory = applyVisualStyleTaskFactory;
 	}
-
 
 	@Override
 	public void run(TaskMonitor taskMonitor) {
 
 		taskMonitor.setStatusMessage("Loading visual styles from file ...");
 
-		Set<VisualStyle> vsSet = loadVizmapFileTaskFactory.loadStyles(f);		
-		
-		if (view == null || vsSet.size() ==0){
+		Set<VisualStyle> vsSet = loadVizmapFileTaskFactory.loadStyles(f);
+
+		if (view == null || vsSet.size() == 0)
 			return;
-		}
 
 		// Apply one loaded visual style to teh given view
-		VisualStyle vs = vsSet.iterator().next();
-		
-		TaskIterator ti = this.applyVisualStyleTaskFactory.createTaskIterator(view, vs);
+		final Set<CyNetworkView> views = new HashSet<CyNetworkView>();
+		views.add(view);
+		TaskIterator ti = this.applyVisualStyleTaskFactory.createTaskIterator(views);
 
 		this.insertTasksAfterCurrentTask(ti);
 	}
