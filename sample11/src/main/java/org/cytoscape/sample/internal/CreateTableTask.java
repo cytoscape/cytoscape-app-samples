@@ -45,11 +45,8 @@ public class CreateTableTask extends AbstractTask {
 		row = table.getRow(keys[2]);
 		row.set(attributeNmae, new Integer(4));
 
-		// We are loading node attribute
-		Class<? extends CyIdentifiable> type = CyNode.class;
-
 		// Step 3: pass the new table to MapNetworkAttrTask
-		super.insertTasksAfterCurrentTask( mapNetworkAttrTF.createTaskIterator(type,table,CyNetwork.NAME) );
+		super.insertTasksAfterCurrentTask( mapNetworkAttrTF.createTaskIterator(table) );
 
 	}
 }
