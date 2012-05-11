@@ -17,9 +17,6 @@ public class Sample27aApp extends AbstractCySwingApp {
 	public Sample27aApp(CySwingAppAdapter swingAdapter){
 		super(swingAdapter);
 
-		//a.get
-		StreamUtil streamUtil = null;
-		
 		// Define a filter
 		HashSet<String> extensions = new HashSet<String>();
 		extensions.add("tc");
@@ -27,9 +24,9 @@ public class Sample27aApp extends AbstractCySwingApp {
 		contentTypes.add("txt");
 		String description = "My test filter";
 		DataCategory category = DataCategory.NETWORK;
-		BasicCyFileFilter filter = new BasicCyFileFilter(extensions,contentTypes, description, category, streamUtil);
+		BasicCyFileFilter filter = new BasicCyFileFilter(extensions,contentTypes, description, category, swingAdapter.getStreamUtil());
 		
-		// Create an instance of the TaskFactory
+		// Create an instance of the ReaderFactory
 		TCReaderFactory factory = new TCReaderFactory(filter, swingAdapter.getCyNetworkFactory(), swingAdapter.getCyNetworkViewFactory());
 		
 		//register the ReaderFactory as an InputStreamTaskFactory.

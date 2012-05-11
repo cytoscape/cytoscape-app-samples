@@ -14,6 +14,8 @@ import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.CyNetworkViewFactory;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
+import java.util.HashMap;
+
 
 public class TCReader extends AbstractTask implements CyNetworkReader  {
 //	reads the file and creates a CyNetwork.
@@ -34,19 +36,56 @@ public class TCReader extends AbstractTask implements CyNetworkReader  {
 	public void run(TaskMonitor taskMonitor) throws Exception {
 		String text = readString(stream);
 		
-		
+		String[] lines = text.split("\n");
+
+		if (lines.length == 0){
+			return;
+		}
+
 		network = networkFactory.createNetwork();
+
+		HashMap<String, CyNode> nodeNameMap = new HashMap<String, CyNode>();
 		
-		
-		CyNode node = network.addNode();
-		CyRow attributes = network.getRow(node);
-		attributes.set("name", "NAMENAME");
-		
-		
-		
-		
-		
+		for (int i=0; i< lines.length; i++){
+			String line = lines[i];
+			String[] items = line.split("\t");
+			String name1 = items[0].trim();
+			String name2 = items[1].trim();
+
+			CyNode node1 = null;
+			CyNode node2 = null;
+
+			// for Node1
+			if (nodeNameMap.containsKey(name1)){
+				// Node already existed, get a reference to it
+				node1 = nodeNameMap.get(name1);
+			}
+			else {
+				// Node does not exist, create new one
+				node1 = network.addNode();				
+				CyRow attributes = network.getRow(node1);
+				attributes.set("name", name1);	
+				nodeNameMap.put(name1, node1);	
+			}
+
+			// for Node2
+			if (nodeNameMap.containsKey(name2)){
+				// Node already existed, get a reference to it
+				node2 = nodeNameMap.get(name2);
+			}
+			else {
+				// Node does not exist, create new one
+				node2 = network.addNode();				
+				CyRow attributes = network.getRow(node2);
+				attributes.set("name", name2);
+				nodeNameMap.put(name2, node2);
+			}
+			
+			// Create an edge between node1 and node2
+			network.addEdge(node1, node2, true);
+		}
 	}
+
 	
 	public CyNetwork[] getNetworks() {
 		return new CyNetwork[] { network };
