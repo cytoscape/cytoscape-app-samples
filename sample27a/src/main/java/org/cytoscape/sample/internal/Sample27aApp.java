@@ -12,9 +12,9 @@ import org.cytoscape.io.util.StreamUtil;
 /**
  * 
  */
-public class Sample27App extends AbstractCySwingApp {
+public class Sample27aApp extends AbstractCySwingApp {
 	
-	public Sample27App(CySwingAppAdapter swingAdapter){
+	public Sample27aApp(CySwingAppAdapter swingAdapter){
 		super(swingAdapter);
 
 		//a.get
