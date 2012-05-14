@@ -43,8 +43,8 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+
 import org.cytoscape.application.swing.AbstractCyAction;
-import org.cytoscape.plugin.CyPluginAdapter;
 
 /**
  *

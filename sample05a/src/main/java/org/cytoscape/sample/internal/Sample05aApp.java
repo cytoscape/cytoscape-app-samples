@@ -1,6 +1,5 @@
 package org.cytoscape.sample.internal;
 
-import java.util.Hashtable;
 import java.util.Properties;
 import org.cytoscape.app.AbstractCyApp;
 import org.cytoscape.app.CyAppAdapter;
