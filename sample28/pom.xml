@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.cytoscape</groupId>
+	<artifactId>sample28-parent</artifactId>
+	<version>3.0.0-alpha9-SNAPSHOT</version>
+	<name>Cytoscape Sample 28 Parent POM</name>
+	<packaging>pom</packaging>
+
+	<properties>
+		<bundle.symbolicName>sample28</bundle.symbolicName>
+		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
+		<cytoscape.api.version>3.0.0-beta2-SNAPSHOT</cytoscape.api.version>
+		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
+		<osgi.api.version>4.2.0</osgi.api.version>
+	</properties>
+
+	<modules>
+		<module>app</module>
+		<module>feature</module>
+	</modules>
+
+		<dependencies>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>swing-application-api</artifactId>
+			<version>${cytoscape.api.version}</version>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>work-api</artifactId>
+			<version>${cytoscape.api.version}</version>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.jfree.chart</groupId>
+		    <artifactId>com.springsource.org.jfree.chart</artifactId>
+		    <version>1.0.9</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.jfree</groupId>
+		    <artifactId>com.springsource.org.jfree</artifactId>
+		    <version>1.0.12</version>
+		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>com.springsource.javax.servlet</artifactId>
+		    <version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>service-api</artifactId>
+			<version>${cytoscape.api.version}</version>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>${osgi.api.version}</version>
+            <scope>provided</scope>
+		</dependency>
+		</dependencies>
+
+	<pluginRepositories>
+	    <pluginRepository>
+			<id>apache_snapshots</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<name>Apache Snapshots</name>
+			<url>https://repository.apache.org/content/groups/snapshots/</url>
+	    </pluginRepository>
+	</pluginRepositories>
+	<!-- Links to the Cytoscape Maven repositories. -->
+	<repositories>
+		<repository>
+			<id>cytoscape_snapshots</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<name>Cytoscape Snapshots</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>cytoscape_releases</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape Releases</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+		    <id>com.springsource.repository.bundles.release</id>
+		    <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+		    <url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+
+		<repository>
+		    <id>com.springsource.repository.bundles.external</id>
+		    <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+		    <url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+	</repositories>
+</project>
