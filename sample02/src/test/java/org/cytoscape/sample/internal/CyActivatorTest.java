@@ -1,12 +1,11 @@
 package org.cytoscape.sample.internal; 
 
-import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.service.util.FakeBundleContext;
-
 import static org.junit.Assert.assertNotNull;
+
+import org.cytoscape.application.swing.CySwingApplication;
+import org.cytoscape.service.util.internal.FakeBundleContext;
 import org.junit.Before;
 import org.junit.Test;
-
 import org.osgi.framework.BundleContext;
 
 public final class CyActivatorTest {
