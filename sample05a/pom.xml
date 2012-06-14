@@ -28,6 +28,9 @@
           <archive>
             <manifestEntries>
               <Cytoscape-App>org.cytoscape.sample.internal.Sample05aApp</Cytoscape-App>
+              <Cytoscape-App-Name>Sample05aApp</Cytoscape-App-Name>
+              <Cytoscape-App-Version>0.1</Cytoscape-App-Version>
+              <Cytoscape-App-Works-With>3.0</Cytoscape-App-Works-With>
             </manifestEntries>
           </archive>
         </configuration>
