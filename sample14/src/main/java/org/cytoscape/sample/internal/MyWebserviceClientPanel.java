@@ -79,6 +79,8 @@ SetCurrentNetworkListener {
 
 		this.taskManager = taskManager;
 		this.appManager = appManager;
+		
+		initUI();
 	}
 
 	public void setClient(final MyWebserviceClient client) {
@@ -86,15 +88,12 @@ SetCurrentNetworkListener {
 
 		this.addAncestorListener(new AncestorListener() {
 
-			//@Override
 			public void ancestorRemoved(AncestorEvent arg0) {
 			}
 
-			//@Override
 			public void ancestorMoved(AncestorEvent arg0) {
 			}
 
-			//@Override
 			public void ancestorAdded(AncestorEvent arg0) {
 				if(!initialized)
 					initPanel();
@@ -103,27 +102,26 @@ SetCurrentNetworkListener {
 	}
 
 	private void initPanel() {
-		
-		taskManager.setExecutionContext(null);
 		initialized = true;
 		
-		this.add(new JLabel("Test Test Test"));
-
-		this.setBorder(BorderFactory.createTitledBorder(null, "Test only",
-				TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION,
-				new Font("SansSerif", 1, 12)));
+		System.out.println("service location = "+ this.client.getServiceLocation());
 	}
 
+	private void initUI(){
+
+		this.setBorder(BorderFactory.createTitledBorder("test test"));
+		this.add(new JLabel("Test Test Test"));
+	}
 
 	public void handleEvent(final ColumnCreatedEvent e) {
-		System.out.println("\nGot ColumnCreatedEvent...");
+		//System.out.println("\nGot ColumnCreatedEvent...");
 	}
 
 	public void handleEvent(final ColumnDeletedEvent e) {
-		System.out.println("\nGot ColumnDeletedEvent...");
+		//System.out.println("\nGot ColumnDeletedEvent...");
 	}
 	
 	public void handleEvent(final SetCurrentNetworkEvent e) {
-		System.out.println("\nGot SetCurrentNetworkEvent...");
+		//System.out.println("\nGot SetCurrentNetworkEvent...");
 	}
 }

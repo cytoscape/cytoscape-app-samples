@@ -54,16 +54,15 @@ public class MyWebserviceClient extends AbstractWebServiceGUIClient implements T
 	private final CySwingApplication app;
 	private final CyTableManager tableManager;
 	private final MapTableToNetworkTablesTaskFactory mapNetworkAttrTF;
-	private final MyWebserviceClientPanel gui;
 
 	private final static String baseURL = "http://website/webservice";
+
 	/**
 	 * Creates a new web service Client object.
 	 * 
 	 * @throws ServiceException
 	 * @throws ConfigurationException
 	 */
-	
 	public MyWebserviceClient(final String displayName, final String description,
 	                     final CyTableFactory tableFactory,
 	                     final CySwingApplication app, final CyTableManager tableManager,
@@ -77,11 +76,9 @@ public class MyWebserviceClient extends AbstractWebServiceGUIClient implements T
 		this.tableManager         = tableManager;
 		this.mapNetworkAttrTF     = mapNetworkAttrTF;
 		this.gui = gui;
-		
 	}
 
 
-	//@Override
 	public TaskIterator createTaskIterator(Object query) {
 		if (gui == null)
 			throw new IllegalStateException(
