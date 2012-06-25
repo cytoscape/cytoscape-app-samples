@@ -1,21 +1,19 @@
 package org.cytoscape.sample.sample24.internal;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import org.cytoscape.application.swing.CyHelpBroker;
 import javax.help.HelpSet;
 
 
 /**
- * Creates a new menu item under Apps menu section.
+ * Creates a help in the cytoscape help browser for sample 24.
  *
  */
-public class MenuAction {
+public class AppHelp {
 
 	private final CyHelpBroker cyHelpBroker;
-	public MenuAction(CyHelpBroker cyHelpBroker) {
+	public AppHelp(CyHelpBroker cyHelpBroker) {
 		this.cyHelpBroker = cyHelpBroker;
-		
 		addHelp();
 	}
 
@@ -24,7 +22,7 @@ public class MenuAction {
 	 */
 	private void addHelp() {
 		final String HELP_SET_NAME = "/help/jhelpset";
-		final ClassLoader classLoader = MenuAction.class.getClassLoader();
+		final ClassLoader classLoader = AppHelp.class.getClassLoader();
 		URL helpSetURL;
 		try {
 			helpSetURL = HelpSet.findHelpSet(classLoader, HELP_SET_NAME);
