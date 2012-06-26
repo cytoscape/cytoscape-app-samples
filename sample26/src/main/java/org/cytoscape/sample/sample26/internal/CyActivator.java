@@ -2,7 +2,6 @@ package org.cytoscape.sample.sample26.internal;
 
 import java.util.Properties;
 
-import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.CyEdgeViewContextMenuFactory;
 import org.cytoscape.application.swing.CyNodeViewContextMenuFactory;
 import org.cytoscape.service.util.AbstractCyActivator;
