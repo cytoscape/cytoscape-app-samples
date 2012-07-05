@@ -29,7 +29,7 @@ public class AppHelp {
 			final HelpSet newHelpSet = new HelpSet(classLoader, helpSetURL);
 			cyHelpBroker.getHelpSet().add(newHelpSet);
 		} catch (final Exception e) {
-			System.err.println("Sample24: Could not find help set: \"" + HELP_SET_NAME + "!");
+			System.err.println("Sample24: Could not find help set: \"" + HELP_SET_NAME + ".");
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class DeleteAttributeTask extends AbstractTask {
 	
 	public void run(TaskMonitor monitor) {
 		if (network == null){
-			System.out.println("There is no network!");
+			System.out.println("There is no network.");
 			return;
 		}
 		
@@ -31,7 +31,7 @@ public class DeleteAttributeTask extends AbstractTask {
 			System.out.println("Column "+ columnName + " is deleted");
 		}
 		else {
-			System.out.println("No such column!");
+			System.out.println("No such column.");
 		}
 	} 
 	

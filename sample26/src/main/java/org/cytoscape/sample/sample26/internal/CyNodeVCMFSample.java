@@ -28,7 +28,7 @@ public class CyNodeVCMFSample implements CyNodeViewContextMenuFactory, ActionLis
 	public void actionPerformed(ActionEvent e) {
 
 		// Write your own function here.
-		JOptionPane.showMessageDialog(null, "CyNodeViewContextMenuFactory worked!");
+		JOptionPane.showMessageDialog(null, "CyNodeViewContextMenuFactory worked.");
 		
 	}
 }

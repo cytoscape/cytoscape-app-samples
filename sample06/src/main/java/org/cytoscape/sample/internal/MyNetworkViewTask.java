@@ -58,7 +58,7 @@ public class MyNetworkViewTask extends AbstractTask {
 			myView = cnvf.createNetworkView(myNet);
 			networkViewManager.addNetworkView(myView);
 		} else {
-			System.out.println("networkView already existed!");
+			System.out.println("networkView already existed.");
 		}
 
 		// Set the variable destroyView to true, the following snippet of code

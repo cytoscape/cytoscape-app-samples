@@ -38,14 +38,14 @@ public class IXor extends AbstractFunction {
 		try {
 			arg1 = FunctionUtil.getArgAsLong(args[0]);
 		} catch (final Exception e) {
-			throw new IllegalArgumentException("IXOR: can't convert the 1st argument to an integer!");
+			throw new IllegalArgumentException("IXOR: can't convert the 1st argument to an integer.");
 		}
 
 		long arg2;
 		try {
 			arg2 = FunctionUtil.getArgAsLong(args[0]);
 		} catch (final Exception e) {
-			throw new IllegalArgumentException("IXOR: can't convert the 2nd argument to an integer!");
+			throw new IllegalArgumentException("IXOR: can't convert the 2nd argument to an integer.");
 		}
 
 		final long result = arg1 ^ arg2;

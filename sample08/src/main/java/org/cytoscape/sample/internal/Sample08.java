@@ -29,10 +29,10 @@ public class Sample08 implements NetworkAddedListener, NetworkAboutToBeDestroyed
 	}
 	
 	public void handleEvent(NetworkViewAddedEvent e){
-		System.out.println("Sample08: NetworkViewAddedEvent is received!");		
+		System.out.println("Sample08: NetworkViewAddedEvent is received.");		
 	}
 
 	public void handleEvent(AddedNodesEvent e){
-		System.out.println("Sample08: AddedNodesEvent is received!");
+		System.out.println("Sample08: AddedNodesEvent is received.");
 	}	
 }

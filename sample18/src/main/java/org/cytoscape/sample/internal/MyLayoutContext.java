@@ -15,9 +15,9 @@ public class MyLayoutContext  implements TunableValidator {
 			return ValidationState.OK;			
 		}
 		try {
-			errMsg.append("Xrange must not exceed 100!");
+			errMsg.append("Xrange must not exceed 100.");
 		} catch (final Exception e) {
-			/* Intentionally ignored! */
+			/* Intentionally ignored. */
 		}
 		return ValidationState.INVALID;
 	}

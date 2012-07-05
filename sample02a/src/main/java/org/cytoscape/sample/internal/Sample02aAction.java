@@ -68,6 +68,6 @@ public class Sample02aAction extends AbstractCyAction {
 	 *            DOCUMENT ME!
 	 */
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Sample02a plugin menu item is clicked!");
+		System.out.println("Sample02a plugin menu item is clicked.");
 	}
 }

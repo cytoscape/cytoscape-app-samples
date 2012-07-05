@@ -77,7 +77,7 @@ public class Sample03aAction extends AbstractCyAction {
 	 *            DOCUMENT ME!
 	 */
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Sample03a plugin/toolbar icon is clicked!");
+		System.out.println("Sample03a plugin/toolbar icon is clicked.");
 	}
 	
 	

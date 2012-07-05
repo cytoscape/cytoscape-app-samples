@@ -27,7 +27,7 @@ public class CyEdgeVCNMFSample implements CyEdgeViewContextMenuFactory, ActionLi
 	public void actionPerformed(ActionEvent e) {
 		
 		// Write your own function here.
-		JOptionPane.showMessageDialog(null, "CyEdgeViewContextMenuFactory action worked!");
+		JOptionPane.showMessageDialog(null, "CyEdgeViewContextMenuFactory action worked.");
 		
 	}
 	
