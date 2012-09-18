@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>org.cytoscape</groupId>
@@ -8,50 +9,40 @@
 		<relativePath>../parent</relativePath>
 	</parent>
 
-	
-  <groupId>org.cytoscape.sample</groupId>
-  <artifactId>parent</artifactId>
-  <packaging>pom</packaging>
-  <name>Cytoscape Sample Code Parent POM</name>
+	<groupId>org.cytoscape.sample</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Cytoscape Sample Code Parent POM</name>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
-	<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
-	<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
-	<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
-	<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
-  </properties>
- 
-  <modules>
-	<module>sample02</module>
-	<module>sample02a</module>
-	<module>sample03</module>
-	<module>sample03a</module>
-	<module>sample04</module>
-	<module>sample05</module>
-	<module>sample05a</module>
-	<module>sample06</module>
-	<module>sample07</module>
-	<module>sample08</module>
-	<module>sample09</module>
-	<module>sample10</module>
-	<module>sample11</module>
-	<module>sample12</module>
-	<module>sample13</module>
-	<module>sample14</module>
-	<module>sample15</module>
-	<module>sample16</module>	
-	<module>sample17</module>
-	<module>sample18</module>
-	<module>sample20</module>
-	<module>sample21</module>
-	<module>sample22</module>
-	<module>sample23</module>
-	<module>sample24</module>
-	<module>sample25</module>
-	<module>sample26</module>
-	<module>sample27a</module>
-	<module>sample28</module>
-  </modules>
+	<modules>
+		<module>sample02</module>
+		<module>sample02a</module>
+		<module>sample03</module>
+		<module>sample03a</module>
+		<module>sample04</module>
+		<module>sample05</module>
+		<module>sample05a</module>
+		<module>sample06</module>
+		<module>sample07</module>
+		<module>sample08</module>
+		<module>sample09</module>
+		<module>sample10</module>
+		<module>sample11</module>
+		<module>sample12</module>
+		<module>sample13</module>
+		<module>sample14</module>
+		<module>sample15</module>
+		<module>sample16</module>
+		<module>sample17</module>
+		<module>sample18</module>
+		<module>sample20</module>
+		<module>sample21</module>
+		<module>sample22</module>
+		<module>sample23</module>
+		<module>sample24</module>
+		<module>sample25</module>
+		<module>sample26</module>
+		<module>sample27a</module>
+		<module>sample28</module>
+	</modules>
 </project> 
