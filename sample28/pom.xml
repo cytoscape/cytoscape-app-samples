@@ -12,7 +12,7 @@
 	<properties>
 		<bundle.symbolicName>sample28</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
-		<cytoscape.api.version>3.0.0-beta3-SNAPSHOT</cytoscape.api.version>
+		<cytoscape.api.version>3.0.0-beta4-SNAPSHOT</cytoscape.api.version>
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
 		<osgi.api.version>4.2.0</osgi.api.version>
 	</properties>

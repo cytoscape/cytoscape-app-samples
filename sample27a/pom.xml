@@ -4,7 +4,7 @@
 	<properties>
 		<bundle.symbolicName>sample27s</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>		
-		<cytoscape.api.version>3.0.0-beta3-SNAPSHOT</cytoscape.api.version>
+		<cytoscape.api.version>3.0.0-beta4-SNAPSHOT</cytoscape.api.version>
 		<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
 		<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
 	</properties>
