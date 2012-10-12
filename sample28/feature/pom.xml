@@ -35,7 +35,7 @@
 							<goal>features-create-kar</goal>
 						</goals>
 						<configuration>
-							<featuresFile>target/features.xml</featuresFile>
+							<featuresFile>src/main/features/features.xml</featuresFile>
 						</configuration>
 					</execution>
 				</executions>

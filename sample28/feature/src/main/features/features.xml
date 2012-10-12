@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0" name="sample28-feature">
+    <feature description="Cytoscape Sample 28 Feature (sample28-feature)" version="3.0.0-alpha9-SNAPSHOT" name="sample28-feature">
+        <bundle>mvn:org.cytoscape/sample28-app/3.0.0-alpha9-SNAPSHOT</bundle>
+        <bundle>mvn:org.jfree.chart/com.springsource.org.jfree.chart/1.0.9</bundle>
+        <bundle>mvn:org.jfree/com.springsource.org.jfree/1.0.12</bundle>
+        <bundle>mvn:javax.servlet/com.springsource.javax.servlet/2.5.0</bundle>
+    </feature>
+</features>
