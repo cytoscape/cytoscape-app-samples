@@ -17,8 +17,8 @@ public class MyLayoutTask extends AbstractLayoutTask {
 	private int XRange;
 	private int YRange;
 	
-	public MyLayoutTask(final String name, CyNetworkView networkView, final MyLayoutContext context, Set<View<CyNode>> nodesToLayOut, String attrName, UndoSupport undo) {
-		super(name, networkView, nodesToLayOut, attrName, undo);
+	public MyLayoutTask(final String displayName, CyNetworkView networkView, final MyLayoutContext context, Set<View<CyNode>> nodesToLayOut, String attrName, UndoSupport undo) {
+		super(displayName, networkView, nodesToLayOut, attrName, undo);
 	
 		this.XRange = context.XRange;
 		this.YRange = context.YRange;
