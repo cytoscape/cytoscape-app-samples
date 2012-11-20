@@ -1,5 +1,7 @@
 package org.cytoscape.sample.internal;
 
+import java.io.IOException;
+
 import org.cytoscape.work.Tunable;
 import org.cytoscape.work.TunableValidator;
 
@@ -16,7 +18,7 @@ public class MyLayoutContext  implements TunableValidator {
 		}
 		try {
 			errMsg.append("Xrange must not exceed 100.");
-		} catch (final Exception e) {
+		} catch (final IOException e) {
 			/* Intentionally ignored. */
 		}
 		return ValidationState.INVALID;
