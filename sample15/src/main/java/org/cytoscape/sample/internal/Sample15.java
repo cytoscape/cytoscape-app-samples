@@ -1,19 +1,19 @@
 package org.cytoscape.sample.internal;
 
 import java.awt.event.ActionEvent;
+import java.util.Iterator;
+
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.model.CyTable;
 import org.cytoscape.view.presentation.property.BasicVisualLexicon;
 import org.cytoscape.view.presentation.property.NodeShapeVisualProperty;
-import org.cytoscape.view.vizmap.VisualMappingManager;
-import org.cytoscape.view.vizmap.VisualStyleFactory;
-import org.cytoscape.view.vizmap.VisualStyle;
-import org.cytoscape.view.vizmap.VisualMappingFunction;
 import org.cytoscape.view.vizmap.VisualMappingFunctionFactory;
+import org.cytoscape.view.vizmap.VisualMappingManager;
+import org.cytoscape.view.vizmap.VisualStyle;
+import org.cytoscape.view.vizmap.VisualStyleFactory;
 import org.cytoscape.view.vizmap.mappings.DiscreteMapping;
 import org.cytoscape.view.vizmap.mappings.PassthroughMapping;
-import java.util.Iterator;
 
 
 public class Sample15 extends AbstractCyAction {
@@ -66,13 +66,12 @@ public class Sample15 extends AbstractCyAction {
 
 		// 1. pass-through mapping
 		String ctrAttrName1 = "SUID";
-		PassthroughMapping pMapping = (PassthroughMapping) this.vmfFactoryP.createVisualMappingFunction(ctrAttrName1, String.class, attrForTest, BasicVisualLexicon.NODE_LABEL);
-		
+		PassthroughMapping pMapping = (PassthroughMapping) this.vmfFactoryP.createVisualMappingFunction(ctrAttrName1, String.class, BasicVisualLexicon.NODE_LABEL);
 		// 2. DiscreteMapping - Set node shape based on attribute value
 		String ctrAttrName2 = "NodeShape";
 		Class dataType = String.class; 
 
-		DiscreteMapping dMapping = (DiscreteMapping) this.vmfFactoryD.createVisualMappingFunction(ctrAttrName2, dataType, attrForTest, BasicVisualLexicon.NODE_SHAPE);
+		DiscreteMapping dMapping = (DiscreteMapping) this.vmfFactoryD.createVisualMappingFunction(ctrAttrName2, dataType, BasicVisualLexicon.NODE_SHAPE);
 
 		// If attribute value is "diamon", map the nodeShape to DIAMOND
 		String key  = "diamond";

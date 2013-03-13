@@ -9,6 +9,7 @@ import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
 
 
+
 public class MyNodeViewTask extends AbstractTask {
 	private View<CyNode> nodeView;
 	private CyNetworkView netView;
