@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<properties>
 		<bundle.symbolicName>sample06</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
 		<cytoscape.api.version>3.1.0-SNAPSHOT</cytoscape.api.version>
-		
+
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
 		<osgi.api.version>4.2.0</osgi.api.version>
 	</properties>
@@ -15,8 +16,7 @@
 	<packaging>bundle</packaging>
 	<name>${bundle.symbolicName}</name>
 
-  
-  	<repositories>
+	<repositories>
 		<repository>
 			<id>cytoscape_snapshots</id>
 			<snapshots>
@@ -41,9 +41,26 @@
 		</repository>
 	</repositories>
 
-  	<version>3.1.0-SNAPSHOT</version>
-  	<build>
+	<version>3.1.0-SNAPSHOT</version>
+	<build>
 		<plugins>
+			<plugin>
+				<inherited>true</inherited>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<optimize>true</optimize>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+					<compilerArguments>
+						<Xmaxwarns>10000</Xmaxwarns>
+						<Xmaxerrs>10000</Xmaxerrs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -61,8 +78,8 @@
 			</plugin>
 		</plugins>
 	</build>
-  
-  	<dependencies>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>application-api</artifactId>
@@ -88,7 +105,7 @@
 			<artifactId>org.osgi.core</artifactId>
 			<version>${osgi.api.version}</version>
 		</dependency>
-		
-    </dependencies>
-  
+
+	</dependencies>
+
 </project>
