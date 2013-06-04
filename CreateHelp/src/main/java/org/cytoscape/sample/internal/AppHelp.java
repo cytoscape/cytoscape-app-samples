@@ -1,4 +1,4 @@
-package org.cytoscape.sample.sample24.internal;
+package org.cytoscape.sample.internal;
 
 import java.net.URL;
 import org.cytoscape.application.swing.CyHelpBroker;
