@@ -14,6 +14,7 @@ public class Sample11TaskFactory extends AbstractTaskFactory {
 			MapTableToNetworkTablesTaskFactory mapNetworkAttrTF){
 		
 		this.tableFactory = tableFactory;
+		this.mapNetworkAttrTF = mapNetworkAttrTF;
 
 	}
 	public TaskIterator createTaskIterator() {
