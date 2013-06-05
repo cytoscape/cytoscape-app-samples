@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<name>${bundle.symbolicName}</name>
 
-	<version>0.0.1-SNAPSHOT-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<build>
 		<plugins>
