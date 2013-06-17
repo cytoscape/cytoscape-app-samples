@@ -62,17 +62,15 @@ public class Sample15 extends AbstractCyAction {
 		VisualStyle vs= this.visualStyleFactoryServiceRef.createVisualStyle("sample15 visual style");
 		this.vmmServiceRef.addVisualStyle(vs);
 
-		CyTable attrForTest = cyApplicationManagerServiceRef.getCurrentNetwork().getDefaultNodeTable();
-
 		// 1. pass-through mapping
 		String ctrAttrName1 = "SUID";
-		PassthroughMapping pMapping = (PassthroughMapping) this.vmfFactoryP.createVisualMappingFunction(ctrAttrName1, String.class, attrForTest, BasicVisualLexicon.NODE_LABEL);
+		PassthroughMapping pMapping = (PassthroughMapping) this.vmfFactoryP.createVisualMappingFunction(ctrAttrName1, String.class, BasicVisualLexicon.NODE_LABEL);
 		
 		// 2. DiscreteMapping - Set node shape based on attribute value
 		String ctrAttrName2 = "NodeShape";
 		Class dataType = String.class; 
 
-		DiscreteMapping dMapping = (DiscreteMapping) this.vmfFactoryD.createVisualMappingFunction(ctrAttrName2, dataType, attrForTest, BasicVisualLexicon.NODE_SHAPE);
+		DiscreteMapping dMapping = (DiscreteMapping) this.vmfFactoryD.createVisualMappingFunction(ctrAttrName2, dataType, BasicVisualLexicon.NODE_SHAPE);
 
 		// If attribute value is "diamon", map the nodeShape to DIAMOND
 		String key  = "diamond";
