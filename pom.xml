@@ -12,37 +12,40 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
-	<name>Cytoscape Sample Code Parent POM</name>
+	<name>Cytoscape Sample Apps Parent POM</name>
 
 	<modules>
-		<module>sample02</module>
-		<module>sample02a</module>
-		<module>sample03</module>
-		<module>sample03a</module>
-		<module>sample04</module>
-		<module>sample05</module>
-		<module>sample05a</module>
-		<module>sample06</module>
-		<module>sample07</module>
-		<module>sample08</module>
-		<module>sample09</module>
-		<module>sample10</module>
-		<module>sample11</module>
-		<module>sample12</module>
-		<module>sample13</module>
-		<module>sample14</module>
-		<module>sample15</module>
-		<module>sample16</module>
-		<module>sample17</module>
-		<module>sample18</module>
-		<module>sample20</module>
-		<module>sample21</module>
-		<module>sample22</module>
-		<module>sample23</module>
-		<module>sample24</module>
-		<module>sample25</module>
-		<module>sample26</module>
-		<module>sample27a</module>
-		<module>sample28</module>
+		<module>sample-add-context-menu-items</module>
+		<module>sample-add-help</module>
+		<module>sample-add-menu-item</module>
+		<module>sample-add-panel</module>
+		<module>sample-add-panel-simple</module>
+		<module>sample-add-service-listener</module>
+		<module>sample-add-toolbar-button</module>
+		<module>sample-add-toolbar-button-simple</module>
+		<module>sample-add-view-tasks</module>
+		<module>sample-add-webservice-client</module>
+		<module>sample-change-node-border-width</module>
+		<module>sample-create-equation-function</module>
+		<module>sample-create-layout</module>
+		<module>sample-create-nested-network</module>
+		<module>sample-create-network</module>
+		<module>sample-create-network-reader-simple</module>
+		<module>sample-create-network-simple</module>
+		<module>sample-create-network-view</module>
+		<module>sample-create-table</module>
+		<module>sample-create-table-reader</module>
+		<module>sample-create-visual-style</module>
+		<module>sample-delete-table-column</module>
+		<module>sample-embed-dependencies</module>
+		<module>sample-get-selected-nodes</module>
+		<module>sample-handle-network-events</module>
+		<module>sample-import-visual-style</module>
+		<module>sample-save-restore-state-file</module>
+		<module>sample-set-network-background-color</module>
+		<module>sample-set-session-property</module>
+		<module>sample-use-task-monitor</module>
+		<module>sample-use-webservice</module>
+		<module>sample-zoom-network-view</module>
 	</modules>
 </project> 
