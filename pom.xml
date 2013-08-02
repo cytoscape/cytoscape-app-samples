@@ -17,10 +17,10 @@
 	<modules>
 		<module>sample-add-context-menu-items</module>
 		<module>sample-add-help</module>
-		<module>sample-add-menu-item</module>
 		<module>sample-add-panel</module>
 		<module>sample-add-panel-simple</module>
 		<module>sample-add-service-listener</module>
+		<module>sample-add-submenu</module>
 		<module>sample-add-toolbar-button</module>
 		<module>sample-add-toolbar-button-simple</module>
 		<module>sample-add-view-tasks</module>

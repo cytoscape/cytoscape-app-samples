@@ -6,14 +6,14 @@ import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import javax.swing.JOptionPane;
 
-public class Sample04 extends AbstractCyAction {
+public class SubmenuAction extends AbstractCyAction {
 
 	private CySwingApplication desktopApp;
 
-	public Sample04(CySwingApplication desktopApp){
+	public SubmenuAction(CySwingApplication desktopApp){
 		// Add a sub-menu item -- Apps->Sample04->sample04
-		super("sample04...");
-		setPreferredMenu("Apps.Sample04");
+		super("Submenu Action...");
+		setPreferredMenu("Apps.Submenu");
 		//setMenuGravity(2.0f);
 		
 		this.desktopApp = desktopApp;
