@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<properties>
-		<bundle.symbolicName>org.cytoscape.sample-add-toolbar-button</bundle.symbolicName>
+		<bundle.symbolicName>org.cytoscape.sample-add-icon-action</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
 		<cytoscape.api.version>3.0.0</cytoscape.api.version>
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
@@ -11,11 +11,11 @@
 	</properties>
 
 	<groupId>org.cytoscape.sample</groupId>
-	<artifactId>sample-add-toolbar-button</artifactId>
+	<artifactId>sample-add-icon-action</artifactId>
 	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Add Toolbar Button (${project.artifactId})</name>
-
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Cytoscape Sample App - Add Icon Action (${project.artifactId})</name>
 
 	<repositories>
 		<repository>
