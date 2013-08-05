@@ -2,50 +2,43 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.cytoscape</groupId>
-		<artifactId>parent</artifactId>
-		<version>3.1.0-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
-	</parent>
-
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
 	<name>Cytoscape Sample Apps Parent POM</name>
 
 	<modules>
-		<module>sample-add-context-menu-items</module>
-		<module>sample-add-help</module>
-		<module>sample-add-icon-action</module>
-		<module>sample-add-icon-action-simple</module>
-		<module>sample-add-panel</module>
-		<module>sample-add-panel-simple</module>
-		<module>sample-add-service-listener</module>
-		<module>sample-add-submenu</module>
-		<module>sample-add-view-tasks</module>
-		<module>sample-add-webservice-client</module>
 		<module>sample-change-node-border-width</module>
-		<module>sample-create-equation-function</module>
-		<module>sample-create-layout</module>
 		<module>sample-create-nested-network</module>
 		<module>sample-create-network</module>
-		<module>sample-create-network-reader-simple</module>
 		<module>sample-create-network-simple</module>
 		<module>sample-create-network-view</module>
 		<module>sample-create-table</module>
-		<module>sample-create-table-reader</module>
 		<module>sample-create-visual-style</module>
+		<module>sample-custom-layout</module>
 		<module>sample-delete-table-column</module>
 		<module>sample-embed-dependencies</module>
+		<module>sample-equation-function</module>
 		<module>sample-get-selected-nodes</module>
-		<module>sample-handle-network-events</module>
+		<module>sample-help</module>
+		<module>sample-icon-action</module>
+		<module>sample-icon-action-simple</module>
 		<module>sample-import-visual-style</module>
+		<module>sample-network-events-listener</module>
+		<module>sample-network-reader-simple</module>
+		<module>sample-panel</module>
+		<module>sample-panel-simple</module>
 		<module>sample-save-restore-state-file</module>
+		<module>sample-service-listener</module>
 		<module>sample-set-network-background-color</module>
 		<module>sample-set-session-property</module>
+		<module>sample-table-reader</module>
 		<module>sample-use-task-monitor</module>
 		<module>sample-use-webservice</module>
+		<module>sample-view-context-menus</module>
+		<module>sample-view-context-menu-tasks</module>
+		<module>sample-webservice-client</module>
 		<module>sample-zoom-network-view</module>
 	</modules>
 </project> 
