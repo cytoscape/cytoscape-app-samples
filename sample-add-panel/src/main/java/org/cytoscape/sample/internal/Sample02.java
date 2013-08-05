@@ -18,7 +18,7 @@ public class Sample02 extends AbstractCyAction {
 	public Sample02(CySwingApplication desktopApp,
 			MyCytoPanel myCytoPanel){
 		// Add a menu item -- Apps->sample02
-		super("sample02");
+		super("");
 		setPreferredMenu("Apps");
 
 		this.desktopApp = desktopApp;

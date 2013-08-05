@@ -7,11 +7,11 @@ import org.cytoscape.app.swing.CySwingAppAdapter;
 /**
  * An implementation of CyPluginAdapter
  */
-public class Sample03aApp extends AbstractCySwingApp {
+public class IconActionApp extends AbstractCySwingApp {
 	
-	public Sample03aApp(CySwingAppAdapter swingAdapter){
+	public IconActionApp(CySwingAppAdapter swingAdapter){
 		super(swingAdapter);
 		
-		swingAdapter.getCySwingApplication().addAction(new Sample03aAction());
+		swingAdapter.getCySwingApplication().addAction(new IconAction(swingAdapter.getCySwingApplication()));
 	}
 }
