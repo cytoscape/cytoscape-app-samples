@@ -27,10 +27,10 @@ public class CyActivator extends AbstractCyActivator {
 		VisualMappingFunctionFactory vmfFactoryD = getService(bc,VisualMappingFunctionFactory.class, "(mapping.type=discrete)");
 		VisualMappingFunctionFactory vmfFactoryP = getService(bc,VisualMappingFunctionFactory.class, "(mapping.type=passthrough)");
 
-		Sample15 sample16Action = new Sample15(cyApplicationManagerServiceRef, vmmServiceRef, visualStyleFactoryServiceRef, 
+		CreateVisualStyleAction createVisualStyleAction = new CreateVisualStyleAction(cyApplicationManagerServiceRef, vmmServiceRef, visualStyleFactoryServiceRef, 
 				vmfFactoryC, vmfFactoryD, vmfFactoryP);
 		
-		registerService(bc,sample16Action,CyAction.class, new Properties());
+		registerService(bc,createVisualStyleAction,CyAction.class, new Properties());
 	}
 }
 

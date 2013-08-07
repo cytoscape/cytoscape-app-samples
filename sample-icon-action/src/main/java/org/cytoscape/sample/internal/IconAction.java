@@ -14,9 +14,9 @@ public class IconAction extends AbstractCyAction {
 	private CySwingApplication desktopApp;
 	
 	public IconAction(CySwingApplication desktopApp){
-		// Add a menu item -- Plugins->sample03
-		super("Sample Icon Action");
-		setPreferredMenu("Apps");
+		// Add a menu item
+		super("Icon Action");
+		setPreferredMenu("Apps.Samples");
 
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/tiger.jpg"));
 		ImageIcon smallIcon = new ImageIcon(getClass().getResource("/images/tiger_small.jpg"));

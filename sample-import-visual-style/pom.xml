@@ -16,7 +16,7 @@
 	<packaging>bundle</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Import Visual Style (${project.artifactId})</name>
+	<name>Sample App - Import Visual Style</name>
 
 	<repositories>
 		<repository>
@@ -106,14 +106,11 @@
 			<artifactId>vizmap-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>core-task-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
-
-
 	</dependencies>
 
 </project>

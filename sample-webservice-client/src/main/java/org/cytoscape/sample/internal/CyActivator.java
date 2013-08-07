@@ -5,8 +5,8 @@ import java.util.Properties;
 
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.CySwingApplication;
-import org.cytoscape.sample.internal.MyWebserviceClient;
-import org.cytoscape.sample.internal.MyWebserviceClientPanel;
+import org.cytoscape.sample.internal.MyWebServiceClient;
+import org.cytoscape.sample.internal.MyWebServiceClientPanel;
 import org.cytoscape.model.CyNetworkManager;
 import org.cytoscape.model.CyTableFactory;
 import org.cytoscape.model.CyTableManager;
@@ -34,9 +34,9 @@ public class CyActivator extends AbstractCyActivator {
 		
 		
 		// Export services
-		MyWebserviceClientPanel myPanel = new MyWebserviceClientPanel(taskManagerServiceRef,cyApplicationManagerServiceRef,cyTableManagerServiceRef,cyNetworkManagerServiceRef);
+		MyWebServiceClientPanel myPanel = new MyWebServiceClientPanel(taskManagerServiceRef,cyApplicationManagerServiceRef,cyTableManagerServiceRef,cyNetworkManagerServiceRef);
 		
-		MyWebserviceClient myClient = new MyWebserviceClient("My Webservice Client","My Test Web Service Client.",cyTableFactoryServiceRef,cySwingApplicationServiceRef,cyTableManagerServiceRef, myPanel, mapNetworkAttrTFServiceRef);
+		MyWebServiceClient myClient = new MyWebServiceClient("My Web Service Client","My Test Web Service Client.",cyTableFactoryServiceRef,cySwingApplicationServiceRef,cyTableManagerServiceRef, myPanel, mapNetworkAttrTFServiceRef);
 		myPanel.setClient(myClient);
 		
 		registerAllServices(bc,myPanel, new Properties());

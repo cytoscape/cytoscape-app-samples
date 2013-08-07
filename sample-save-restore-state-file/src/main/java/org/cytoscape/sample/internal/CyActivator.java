@@ -1,7 +1,7 @@
 package org.cytoscape.sample.internal;
 
 
-import org.cytoscape.sample.internal.Sample21;
+import org.cytoscape.sample.internal.SaveRestoreStateFile;
 
 import org.cytoscape.session.events.SessionAboutToBeSavedListener;
 import org.cytoscape.session.events.SessionLoadedListener;
@@ -22,15 +22,10 @@ public class CyActivator extends AbstractCyActivator {
 
 
 	public void start(BundleContext bc) {
-
+		SaveRestoreStateFile saveRestoreStateFile = new SaveRestoreStateFile();
 		
-		Sample21 sample21 = new Sample21();
-		
-				registerService(bc,sample21,SessionAboutToBeSavedListener.class, new Properties());
-		registerService(bc,sample21,SessionLoadedListener.class, new Properties());
-
-		
-
+		registerService(bc,saveRestoreStateFile,SessionAboutToBeSavedListener.class, new Properties());
+		registerService(bc,saveRestoreStateFile,SessionLoadedListener.class, new Properties());
 	}
 }
 

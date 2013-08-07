@@ -5,12 +5,12 @@ import org.cytoscape.work.TaskIterator;
 
 public class UseWebServiceTaskFactory extends AbstractTaskFactory {
 
-	private final WebServiceHelper wsh;
-	public UseWebServiceTaskFactory(WebServiceHelper wsh){
-		this.wsh = wsh;
+	private final WebServiceHelper webServiceHelper;
+	public UseWebServiceTaskFactory(WebServiceHelper webServiceHelper){
+		this.webServiceHelper = webServiceHelper;
 	}
 	
 	public TaskIterator createTaskIterator(){
-		return new TaskIterator(new UseWebServiceTask(wsh));
+		return new TaskIterator(new UseWebServiceTask(webServiceHelper));
 	}
 }

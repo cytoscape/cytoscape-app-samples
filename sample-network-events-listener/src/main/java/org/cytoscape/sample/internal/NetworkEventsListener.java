@@ -13,26 +13,21 @@ import org.cytoscape.view.model.events.NetworkViewAddedListener;
 
 public class NetworkEventsListener implements NetworkAddedListener, NetworkAboutToBeDestroyedListener,
 				NetworkViewAddedListener, AddedNodesListener {
-
-	public NetworkEventsListener(){
 	
-	}
-	
-
 	public void handleEvent(NetworkAddedEvent e){
-		System.out.println("Sample08: NetworkAddedEvent is received");
+		System.out.println("sample-network-events-listener: NetworkAddedEvent is received");
 		System.out.println("\tnetwork name is "+ e.getNetwork().getRow(e.getNetwork()).get("name", String.class));
 	}
 
 	public void handleEvent(NetworkAboutToBeDestroyedEvent e){
-		System.out.println("Sample08: NetworkAboutToBeDestroyedEvent is received");
+		System.out.println("sample-network-events-listener: NetworkAboutToBeDestroyedEvent is received");
 	}
 	
 	public void handleEvent(NetworkViewAddedEvent e){
-		System.out.println("Sample08: NetworkViewAddedEvent is received.");		
+		System.out.println("sample-network-events-listener: NetworkViewAddedEvent is received.");		
 	}
 
 	public void handleEvent(AddedNodesEvent e){
-		System.out.println("Sample08: AddedNodesEvent is received.");
+		System.out.println("sample-network-events-listener: AddedNodesEvent is received.");
 	}	
 }

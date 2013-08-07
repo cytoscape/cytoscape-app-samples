@@ -13,9 +13,9 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-embed-dependencies</artifactId>
 	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Embed Dependencies (${project.artifactId})</name>
-
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Sample App - Embed Dependencies</name>
 
 	<build>
 		<plugins>

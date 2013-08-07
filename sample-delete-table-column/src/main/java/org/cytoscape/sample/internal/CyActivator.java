@@ -2,7 +2,7 @@ package org.cytoscape.sample.internal;
 
 import org.cytoscape.application.CyApplicationManager;
 
-import org.cytoscape.sample.internal.Sample12TaskFactory;
+import org.cytoscape.sample.internal.DeleteTableColumnTaskFactory;
 
 import org.cytoscape.work.TaskFactory;
 
@@ -25,17 +25,12 @@ public class CyActivator extends AbstractCyActivator {
 
 		CyApplicationManager cyApplicationManagerService = getService(bc,CyApplicationManager.class);
 		
-		Sample12TaskFactory sample12TaskFactory = new Sample12TaskFactory(cyApplicationManagerService);
-		
+		DeleteTableColumnTaskFactory deleteTableColumnTaskFactory = new DeleteTableColumnTaskFactory(cyApplicationManagerService);
 		
 		Properties sample12TaskFactoryProps = new Properties();
-		sample12TaskFactoryProps.setProperty("preferredMenu","Apps");
-		sample12TaskFactoryProps.setProperty("menuGravity","10.0");
-		sample12TaskFactoryProps.setProperty("title","Sample 12");
-		registerService(bc,sample12TaskFactory,TaskFactory.class, sample12TaskFactoryProps);
-
-		
-
+		sample12TaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		sample12TaskFactoryProps.setProperty("title","Delete Table Column");
+		registerService(bc,deleteTableColumnTaskFactory,TaskFactory.class, sample12TaskFactoryProps);
 	}
 }
 

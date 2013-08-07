@@ -15,7 +15,7 @@
 	<packaging>bundle</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Set Session Property (${project.artifactId})</name>
+	<name>Sample App - Set Session Property</name>
 
 	<build>
 		<plugins>

@@ -1,17 +1,17 @@
 package org.cytoscape.sample.internal;
 
 
-import org.osgi.framework.BundleContext;
-import org.cytoscape.service.util.AbstractCyActivator;
+import java.util.HashSet;
 import java.util.Properties;
+import java.util.Set;
+
+import org.cytoscape.app.CyAppAdapter;
 import org.cytoscape.property.CyProperty;
 import org.cytoscape.property.SimpleCyProperty;
-import java.util.Set;
-import java.util.HashSet;
+import org.cytoscape.service.util.AbstractCyActivator;
 import org.cytoscape.session.CySession;
 import org.cytoscape.session.CySessionManager;
-import org.cytoscape.app.CyAppAdapter;
-import org.cytoscape.application.swing.CyAction;
+import org.osgi.framework.BundleContext;
 
 public class CyActivator extends AbstractCyActivator {
 	public CyActivator() {

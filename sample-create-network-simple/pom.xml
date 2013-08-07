@@ -17,7 +17,7 @@
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Create Network (simple app) (${project.artifactId})</name>
+	<name>Sample App - Create Network (simple app)</name>
 
 	<build>
 		<plugins>
@@ -45,10 +45,10 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Cytoscape-App>${bundle.namespace}.Sample05aApp</Cytoscape-App>
-							<Cytoscape-App-Name>$(project.name)</Cytoscape-App-Name>
-							<Cytoscape-App-Version>$(project.version)</Cytoscape-App-Version>
-							<Cytoscape-API-Compatibility>$(cytoscape.api.version)</Cytoscape-API-Compatibility>
+							<Cytoscape-App>${bundle.namespace}.CreateNetworkApp</Cytoscape-App>
+							<Cytoscape-App-Name>${project.name}</Cytoscape-App-Name>
+							<Cytoscape-App-Version>${project.version}</Cytoscape-App-Version>
+							<Cytoscape-API-Compatibility>3</Cytoscape-API-Compatibility>
 						</manifestEntries>
 					</archive>
 				</configuration>

@@ -14,10 +14,10 @@
 
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-help</artifactId>
-	<version>1.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
+	<version>1.0-SNAPSHOT</version>
 
-	<name>Cytoscape Sample App - Help (${project.artifactId})</name>
+	<name>Sample App - Help</name>
 
 	<!-- Links to the Cytoscape Maven repositories. -->
 	<repositories>

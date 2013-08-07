@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Icon Action (simple app) (${project.artifactId})</name>
+	<name>Sample App - Icon Action (simple app)</name>
 
 	<build>
 		<plugins>
@@ -43,12 +43,10 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<manifestEntries>
-							<Cytoscape-App>${bundle.namespace}.Sample03aApp</Cytoscape-App>
-							<Cytoscape-App-Name>$(project.name)</Cytoscape-App-Name>
-							<Cytoscape-App-Version>$(project.version)</Cytoscape-App-Version>
-							<Cytoscape-API-Compatibility>$(cytoscape.api.version)</Cytoscape-API-Compatibility>
-						</manifestEntries>
+							<Cytoscape-App>${bundle.namespace}.IconActionApp</Cytoscape-App>
+							<Cytoscape-App-Name>${project.name}</Cytoscape-App-Name>
+							<Cytoscape-App-Version>${project.version}</Cytoscape-App-Version>
+							<Cytoscape-API-Compatibility>3</Cytoscape-API-Compatibility>
 						</manifestEntries>
 					</archive>
 				</configuration>

@@ -3,4 +3,3 @@ target/
 .project
 .classpath
 .settings/
-sample28/feature/src/main/features/maven-metadata-local.xml

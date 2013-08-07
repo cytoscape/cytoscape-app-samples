@@ -28,13 +28,12 @@ public class CyActivator extends AbstractCyActivator {
 		CyNetworkViewFactory cyNetworkViewFactoryServiceRef = getService(bc,CyNetworkViewFactory.class);
 		CyNetworkViewManager cyNetworkViewManagerServiceRef = getService(bc,CyNetworkViewManager.class);
 		
-		Sample06TaskFactory sample06TaskFactory = new Sample06TaskFactory(cyNetworkNamingServiceRef, cyNetworkFactoryServiceRef,cyNetworkManagerServiceRef, cyNetworkViewFactoryServiceRef,cyNetworkViewManagerServiceRef);
+		CreateNetworkViewTaskFactory createNetworkViewTaskFactory = new CreateNetworkViewTaskFactory(cyNetworkNamingServiceRef, cyNetworkFactoryServiceRef,cyNetworkManagerServiceRef, cyNetworkViewFactoryServiceRef,cyNetworkViewManagerServiceRef);
 				
-		Properties sample06TaskFactoryProps = new Properties();
-		sample06TaskFactoryProps.setProperty("preferredMenu","Apps");
-		sample06TaskFactoryProps.setProperty("menuGravity","12.0");
-		sample06TaskFactoryProps.setProperty("title","Sample 6");
-		registerService(bc,sample06TaskFactory,TaskFactory.class, sample06TaskFactoryProps);
+		Properties createNetworkViewTaskFactoryProps = new Properties();
+		createNetworkViewTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		createNetworkViewTaskFactoryProps.setProperty("title","Create Network View");
+		registerService(bc,createNetworkViewTaskFactory,TaskFactory.class, createNetworkViewTaskFactoryProps);
 	}
 }
 

@@ -14,9 +14,9 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-get-selected-nodes</artifactId>
 	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Get Selected Nodes (${project.artifactId})</name>
-
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Sample App - Get Selected Nodes</name>
 
 	<repositories>
 		<repository>
@@ -83,12 +83,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>application-api</artifactId>
+			<artifactId>swing-application-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>core-task-api</artifactId>
+			<artifactId>work-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>

@@ -17,7 +17,6 @@ public class CyActivator extends AbstractCyActivator {
 
 
 	public void start(BundleContext bc) {
-
 		StreamUtil streamUtil = getService(bc,StreamUtil.class);		
 		CyTableFactory cyDataTableFactoryServiceRef = getService(bc,CyTableFactory.class);
 	
@@ -35,7 +34,7 @@ public class CyActivator extends AbstractCyActivator {
 					
 		//register the ReaderFactory as an InputStreamTaskFactory.
 		Properties props = new Properties();
-		props.setProperty("readerDescription","My Table reader");
+		props.setProperty("readerDescription","My table reader");
 		props.setProperty("readerId","MyTableReader");
 
 		registerService(bc,myTableReader, InputStreamTaskFactory.class, props);

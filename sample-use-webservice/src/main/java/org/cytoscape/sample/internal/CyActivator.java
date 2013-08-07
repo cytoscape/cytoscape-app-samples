@@ -14,18 +14,15 @@ public class CyActivator extends AbstractCyActivator {
 
 
 	public void start(BundleContext bc) {
-
-		WebServiceHelper wsh = new WebServiceHelper();		
+		WebServiceHelper webServiceHelper = new WebServiceHelper();		
+		UseWebServiceTaskFactory useWebServiceTaskFactory= new UseWebServiceTaskFactory(webServiceHelper);
 		
-		UseWebServiceTaskFactory lvp= new UseWebServiceTaskFactory(wsh);
-		
-		Properties sample13Props = new Properties();
-		sample13Props.setProperty("preferredMenu","Apps");
-		sample13Props.setProperty("menuGravity","11.6");
-		sample13Props.setProperty("title","Sample 13-- use webservice");
-		registerService(bc,lvp,TaskFactory.class, sample13Props);
+		Properties useWebServiceTaskFactoryProps = new Properties();
+		useWebServiceTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		useWebServiceTaskFactoryProps.setProperty("title","Use Web Service");
+		registerService(bc,useWebServiceTaskFactory,TaskFactory.class, useWebServiceTaskFactoryProps);
 
-		registerServiceListener(bc,wsh,"addWebServiceClient","removeWebServiceClient",WebServiceClient.class);
+		registerServiceListener(bc,webServiceHelper,"addWebServiceClient","removeWebServiceClient",WebServiceClient.class);
 	}
 }
 

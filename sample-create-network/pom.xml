@@ -2,11 +2,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.cytoscape.sample</groupId>
-	<artifactId>sample-create-network</artifactId>
-	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Create Network (${project.artifactId})</name>
-
 	<properties>
 		<bundle.symbolicName>org.cytoscape.sample-create-network</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
@@ -15,8 +10,13 @@
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
 		<osgi.api.version>4.2.0</osgi.api.version>
 	</properties>
-
+	
+	<groupId>org.cytoscape.sample</groupId>
+	<artifactId>sample-create-network</artifactId>
+	<packaging>bundle</packaging>
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Sample App - Create Network</name>
 
 	<repositories>
 		<repository>

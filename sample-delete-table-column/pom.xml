@@ -14,9 +14,9 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-delete-table-column</artifactId>
 	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Delete Table Column (${project.artifactId})</name>
-
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Sample App - Delete Table Column</name>
 
 	<repositories>
 		<repository>

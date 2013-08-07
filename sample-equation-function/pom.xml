@@ -14,9 +14,9 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-equation-function</artifactId>
 	<packaging>bundle</packaging>
-	<name>Cytoscape Sample App - Equation Function (${project.artifactId})</name>
-
 	<version>1.0-SNAPSHOT</version>
+	
+	<name>Sample App - Equation Function</name>
 
 	<repositories>
 		<repository>

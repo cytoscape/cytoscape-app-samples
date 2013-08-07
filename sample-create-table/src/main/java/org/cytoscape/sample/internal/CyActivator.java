@@ -2,7 +2,7 @@ package org.cytoscape.sample.internal;
 
 import org.cytoscape.model.CyTableFactory;
 
-import org.cytoscape.sample.internal.Sample11TaskFactory;
+import org.cytoscape.sample.internal.CreateTableTaskFactory;
 
 import org.cytoscape.work.TaskFactory;
 
@@ -27,18 +27,12 @@ public class CyActivator extends AbstractCyActivator {
 		CyTableFactory cyDataTableFactoryServiceRef = getService(bc,CyTableFactory.class);
 		MapTableToNetworkTablesTaskFactory mapNetworkAttrTFServiceRef = getService(bc,MapTableToNetworkTablesTaskFactory.class);
 	
+		CreateTableTaskFactory createTableTaskFactory = new CreateTableTaskFactory(cyDataTableFactoryServiceRef,mapNetworkAttrTFServiceRef);
 		
-		Sample11TaskFactory sample11TaskFactory = new Sample11TaskFactory(cyDataTableFactoryServiceRef,mapNetworkAttrTFServiceRef);
-		
-		
-		Properties sample11TaskFactoryProps = new Properties();
-		sample11TaskFactoryProps.setProperty("preferredMenu","Apps");
-		sample11TaskFactoryProps.setProperty("menuGravity","12.0");
-		sample11TaskFactoryProps.setProperty("title","Sample 11");
-		registerService(bc,sample11TaskFactory,TaskFactory.class, sample11TaskFactoryProps);
-
-		
-
+		Properties createTableTaskFactoryProps = new Properties();
+		createTableTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		createTableTaskFactoryProps.setProperty("title","Create Table");
+		registerService(bc,createTableTaskFactory,TaskFactory.class, createTableTaskFactoryProps);
 	}
 }
 

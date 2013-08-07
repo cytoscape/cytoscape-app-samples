@@ -1,6 +1,6 @@
 package org.cytoscape.sample.internal;
 
-import org.cytoscape.sample.internal.Sample09TaskFactory;
+import org.cytoscape.sample.internal.SetNetworkBackgroundColorTaskFactory;
 
 
 import org.osgi.framework.BundleContext;
@@ -19,18 +19,12 @@ public class CyActivator extends AbstractCyActivator {
 
 
 	public void start(BundleContext bc) {
-
-		Sample09TaskFactory sample09TaskFactory = new Sample09TaskFactory();
+		SetNetworkBackgroundColorTaskFactory setNetworkBackgroundColorTaskFactory = new SetNetworkBackgroundColorTaskFactory();
 		
-		
-		Properties sample09TaskFactoryProps = new Properties();
-		sample09TaskFactoryProps.setProperty("preferredMenu","Apps");
-		sample09TaskFactoryProps.setProperty("menuGravity","16.0");
-		sample09TaskFactoryProps.setProperty("title","Sample 9");
-		registerService(bc,sample09TaskFactory,NetworkViewTaskFactory.class, sample09TaskFactoryProps);
-
-		
-
+		Properties setNetworkBackgroundColorTaskFactoryProps = new Properties();
+		setNetworkBackgroundColorTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		setNetworkBackgroundColorTaskFactoryProps.setProperty("title","Set Network Background Color");
+		registerService(bc,setNetworkBackgroundColorTaskFactory,NetworkViewTaskFactory.class, setNetworkBackgroundColorTaskFactoryProps);
 	}
 }
 

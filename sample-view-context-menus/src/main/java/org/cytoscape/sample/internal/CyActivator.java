@@ -11,13 +11,15 @@ public class CyActivator extends AbstractCyActivator {
 
 	@Override
 	public void start(BundleContext context) throws Exception {
-		CyNodeViewContextMenuFactory cyNodeVCMF  = new CyNodeVCMFSample();
-		CyEdgeViewContextMenuFactory cyEdgeVCMF = new CyEdgeVCNMFSample();
+		CyNodeViewContextMenuFactory myNodeViewContextMenuFactory  = new MyNodeViewContextMenuFactory();
+		Properties myNodeViewContextMenuFactoryProps = new Properties();
+		myNodeViewContextMenuFactoryProps.put("preferredMenu", "Apps.Samples");
+		registerAllServices(context, myNodeViewContextMenuFactory, myNodeViewContextMenuFactoryProps);
 		
-		Properties properties = new Properties();
-		registerAllServices(context, cyNodeVCMF, properties);
-		registerAllServices(context, cyEdgeVCMF, properties);
-		
+		CyEdgeViewContextMenuFactory myEdgeViewContextMenuFactory = new MyEdgeViewContextMenuFactory();
+		Properties myEdgeViewContextMenuFactoryProps = new Properties();
+		myEdgeViewContextMenuFactoryProps.put("preferredMenu", "Apps.Samples");
+		registerAllServices(context, myEdgeViewContextMenuFactory, myEdgeViewContextMenuFactoryProps);
 	}
 
 }

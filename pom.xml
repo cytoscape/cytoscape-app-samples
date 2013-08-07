@@ -6,10 +6,12 @@
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Cytoscape Sample Apps Parent POM</name>
+	<name>Sample Apps - Parent</name>
 
 	<modules>
 		<module>sample-change-node-border-width</module>
+		<module>sample-control-panel</module>
+		<module>sample-control-panel-simple</module>
 		<module>sample-create-nested-network</module>
 		<module>sample-create-network</module>
 		<module>sample-create-network-simple</module>
@@ -27,8 +29,6 @@
 		<module>sample-import-visual-style</module>
 		<module>sample-network-events-listener</module>
 		<module>sample-network-reader-simple</module>
-		<module>sample-panel</module>
-		<module>sample-panel-simple</module>
 		<module>sample-save-restore-state-file</module>
 		<module>sample-service-listener</module>
 		<module>sample-set-network-background-color</module>
@@ -37,7 +37,7 @@
 		<module>sample-use-task-monitor</module>
 		<module>sample-use-webservice</module>
 		<module>sample-view-context-menus</module>
-		<module>sample-view-context-menu-tasks</module>
+		<module>sample-view-tasks</module>
 		<module>sample-webservice-client</module>
 		<module>sample-zoom-network-view</module>
 	</modules>

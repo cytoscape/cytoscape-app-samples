@@ -16,7 +16,7 @@
 	<packaging>bundle</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Use Task Monitor (${project.artifactId})</name>
+	<name>Sample App - Use Task Monitor</name>
 
 	<repositories>
 		<repository>

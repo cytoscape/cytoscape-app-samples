@@ -21,23 +21,23 @@ public class CyActivator extends AbstractCyActivator {
 
 
 	public void start(BundleContext bc) {
-		// MyLayout service
+		// CustomLayout service
 		UndoSupport undo = getService(bc, UndoSupport.class);
-		MyLayout myLayout = new MyLayout(undo);
+		CustomLayout customLayout = new CustomLayout(undo);
 		
-		Properties myLayoutProps = new Properties();
-		myLayoutProps.setProperty(PREFERRED_MENU, "My Layouts");
-		registerService(bc, myLayout, CyLayoutAlgorithm.class, myLayoutProps);
+		Properties customLayoutProps = new Properties();
+		customLayoutProps.setProperty(PREFERRED_MENU, "Custom Layouts");
+		registerService(bc, customLayout, CyLayoutAlgorithm.class, customLayoutProps);
 
-		// ApplyMyLayoutTaskFactory service
+		// ApplyCustomLayoutTaskFactory service
 		CyLayoutAlgorithmManager layoutManager = getService(bc, CyLayoutAlgorithmManager.class);
 		TunableSetter tunableSetter = getService(bc, TunableSetter.class);
-		ApplyMyLayoutTaskFactory applyLayoutTaskFactory = new ApplyMyLayoutTaskFactory(layoutManager, tunableSetter);
+		ApplyCustomLayoutTaskFactory applyLayoutTaskFactory = new ApplyCustomLayoutTaskFactory(layoutManager, tunableSetter);
 		
-		Properties applyLayoutProperties = new Properties();
-		applyLayoutProperties.setProperty(PREFERRED_MENU, "Apps");
-		applyLayoutProperties.setProperty(TITLE, "Apply MyLayout");
-		registerService(bc, applyLayoutTaskFactory, NetworkViewTaskFactory.class, applyLayoutProperties);
+		Properties applyCustomLayoutProperties = new Properties();
+		applyCustomLayoutProperties.setProperty(PREFERRED_MENU, "Apps.Samples");
+		applyCustomLayoutProperties.setProperty(TITLE, "Apply Custom Layout");
+		registerService(bc, applyLayoutTaskFactory, NetworkViewTaskFactory.class, applyCustomLayoutProperties);
 	}
 }
 

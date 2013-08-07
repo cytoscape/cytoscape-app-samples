@@ -16,7 +16,7 @@
 	<packaging>bundle</packaging>
 	<version>1.0-SNAPSHOT</version>
 	
-	<name>Cytoscape Sample App - Zoom Network View (${project.artifactId})</name>
+	<name>Sample App - Zoom Network View</name>
 
 	<repositories>
 		<repository>

@@ -21,14 +21,13 @@ public class CyActivator extends AbstractCyActivator {
 		LoadVizmapFileTaskFactory loadVizmapFileTaskFactory =  getService(bc,LoadVizmapFileTaskFactory.class);
 		ApplyVisualStyleTaskFactory applyVisualStyleTaskFactory = getService(bc,ApplyVisualStyleTaskFactory.class);
 		
-		LoadVisualPropertiesTaskFactory lvp= new LoadVisualPropertiesTaskFactory(loadVizmapFileTaskFactory,
+		ImportVisualStyleTaskFactory importVisualStyleTaskFactory= new ImportVisualStyleTaskFactory(loadVizmapFileTaskFactory,
 				cyApplicationManagerServiceRef, applyVisualStyleTaskFactory);
 		
-		Properties sample17Props = new Properties();
-		sample17Props.setProperty("preferredMenu","Apps");
-		sample17Props.setProperty("menuGravity","11.5");
-		sample17Props.setProperty("title","Sample 17");
-		registerService(bc,lvp,TaskFactory.class, sample17Props);
+		Properties importVisualStyleTaskFactoryProps = new Properties();
+		importVisualStyleTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");
+		importVisualStyleTaskFactoryProps.setProperty("title","Import Visual Style");
+		registerService(bc,importVisualStyleTaskFactory,TaskFactory.class, importVisualStyleTaskFactoryProps);
 	}
 }
 
