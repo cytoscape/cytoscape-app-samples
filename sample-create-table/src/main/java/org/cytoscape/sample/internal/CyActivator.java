@@ -24,10 +24,10 @@ public class CyActivator extends AbstractCyActivator {
 
 	public void start(BundleContext bc) {
 
-		CyTableFactory cyDataTableFactoryServiceRef = getService(bc,CyTableFactory.class);
-		MapTableToNetworkTablesTaskFactory mapNetworkAttrTFServiceRef = getService(bc,MapTableToNetworkTablesTaskFactory.class);
+		CyTableFactory tableFactory = getService(bc,CyTableFactory.class);
+		MapTableToNetworkTablesTaskFactory mapTableToNetworkTablesTaskFactory = getService(bc,MapTableToNetworkTablesTaskFactory.class);
 	
-		CreateTableTaskFactory createTableTaskFactory = new CreateTableTaskFactory(cyDataTableFactoryServiceRef,mapNetworkAttrTFServiceRef);
+		CreateTableTaskFactory createTableTaskFactory = new CreateTableTaskFactory(tableFactory,mapTableToNetworkTablesTaskFactory);
 		
 		Properties createTableTaskFactoryProps = new Properties();
 		createTableTaskFactoryProps.setProperty("preferredMenu","Apps.Samples");

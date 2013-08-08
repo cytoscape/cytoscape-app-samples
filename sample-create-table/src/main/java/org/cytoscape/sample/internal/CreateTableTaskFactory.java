@@ -8,16 +8,15 @@ import org.cytoscape.work.TaskIterator;
 public class CreateTableTaskFactory extends AbstractTaskFactory {
 	
 	private CyTableFactory tableFactory;
-	private MapTableToNetworkTablesTaskFactory mapNetworkAttrTF;
+	private MapTableToNetworkTablesTaskFactory mapTableToNetworkTablesTaskFactory;
 	
 	public CreateTableTaskFactory(CyTableFactory tableFactory,
-			MapTableToNetworkTablesTaskFactory mapNetworkAttrTF){
-		
+			MapTableToNetworkTablesTaskFactory mapTableToNetworkTablesTaskFactory){
 		this.tableFactory = tableFactory;
-
+		this.mapTableToNetworkTablesTaskFactory = mapTableToNetworkTablesTaskFactory;
 	}
 	public TaskIterator createTaskIterator() {
-		return new TaskIterator(new CreateTableTask(tableFactory, mapNetworkAttrTF));
+		return new TaskIterator(new CreateTableTask(tableFactory, mapTableToNetworkTablesTaskFactory));
 	}
 
 }
