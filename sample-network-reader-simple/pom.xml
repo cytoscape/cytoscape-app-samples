@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<properties>
-		<bundle.symbolicName>org.cytoscape.sample-network-reader-simple</bundle.symbolicName>
-		<bundle.namespace>org.cytoscape.sample.internal</bundle.namespace>
+		<app.symbolicName>org.cytoscape.sample-network-reader-simple</app.symbolicName>
+		<app.namespace>org.cytoscape.sample.internal</app.namespace>
 		<cytoscape.api.version>3.0.0</cytoscape.api.version>
 		<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
 		<maven-surefire-plugin.version>2.7.1</maven-surefire-plugin.version>
@@ -43,7 +43,7 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Cytoscape-App>${bundle.namespace}.NetworkReaderApp</Cytoscape-App>
+							<Cytoscape-App>${app.namespace}.NetworkReaderApp</Cytoscape-App>
 							<Cytoscape-App-Name>${project.name}</Cytoscape-App-Name>
 							<Cytoscape-App-Version>${project.version}</Cytoscape-App-Version>
 							<Cytoscape-API-Compatibility>3</Cytoscape-API-Compatibility>
