@@ -13,7 +13,7 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-embed-dependencies</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	
 	<name>Sample App - Embed Dependencies</name>
 

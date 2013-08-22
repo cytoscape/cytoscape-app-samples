@@ -13,7 +13,7 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-icon-action-simple</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	
 	<name>Sample App - Icon Action (simple app)</name>
 

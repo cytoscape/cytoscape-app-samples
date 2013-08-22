@@ -13,7 +13,7 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-network-reader-simple</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	
 	<name>Sample App - Network Reader (simple app)</name>
 

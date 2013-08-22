@@ -14,7 +14,7 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-save-restore-state-file</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	
 	<name>Sample App - Save/Restore State File</name>
 

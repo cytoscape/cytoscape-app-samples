@@ -13,7 +13,7 @@
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>sample-control-panel-simple</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	
 	<name>Sample App - Control Panel (simple app)</name>
 

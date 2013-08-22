@@ -4,8 +4,9 @@
 
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>parent</artifactId>
+	<version>1.0</version>
 	<packaging>pom</packaging>
-	<version>1.0-SNAPSHOT</version>
+
 	<name>Sample Apps - Parent</name>
 
 	<modules>
