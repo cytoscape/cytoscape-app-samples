@@ -1,48 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>org.cytoscape</groupId>
-		<artifactId>parent</artifactId>
-		<version>3.0.0</version>
-		<relativePath>../parent</relativePath>
-	</parent>
-
 	<groupId>org.cytoscape.sample</groupId>
 	<artifactId>parent</artifactId>
+	<version>1.0</version>
 	<packaging>pom</packaging>
-	<name>Cytoscape Sample Code Parent POM</name>
+
+	<name>Sample Apps - Parent</name>
 
 	<modules>
-		<module>sample02</module>
-		<module>sample02a</module>
-		<module>sample03</module>
-		<module>sample03a</module>
-		<module>sample04</module>
-		<module>sample05</module>
-		<module>sample05a</module>
-		<module>sample06</module>
-		<module>sample07</module>
-		<module>sample08</module>
-		<module>sample09</module>
-		<module>sample10</module>
-		<module>sample11</module>
-		<module>sample12</module>
-		<module>sample13</module>
-		<module>sample14</module>
-		<module>sample15</module>
-		<module>sample16</module>
-		<module>sample17</module>
-		<module>sample18</module>
-		<module>sample20</module>
-		<module>sample21</module>
-		<module>sample22</module>
-		<module>sample23</module>
-		<module>sample24</module>
-		<module>sample25</module>
-		<module>sample26</module>
-		<module>sample27a</module>
-		<module>sample28</module>
+		<module>sample-change-node-border-width</module>
+		<module>sample-control-panel</module>
+		<module>sample-control-panel-simple</module>
+		<module>sample-create-nested-network</module>
+		<module>sample-create-network</module>
+		<module>sample-create-network-simple</module>
+		<module>sample-create-network-view</module>
+		<module>sample-create-table</module>
+		<module>sample-create-visual-style</module>
+		<module>sample-custom-layout</module>
+		<module>sample-delete-table-column</module>
+		<module>sample-embed-dependencies</module>
+		<module>sample-equation-function</module>
+		<module>sample-get-selected-nodes</module>
+		<module>sample-help</module>
+		<module>sample-icon-action</module>
+		<module>sample-icon-action-simple</module>
+		<module>sample-import-visual-style</module>
+		<module>sample-network-events-listener</module>
+		<module>sample-network-reader-simple</module>
+		<module>sample-save-restore-state-file</module>
+		<module>sample-service-listener</module>
+		<module>sample-set-network-background-color</module>
+		<module>sample-set-session-property</module>
+		<module>sample-table-reader</module>
+		<module>sample-use-task-monitor</module>
+		<module>sample-use-webservice</module>
+		<module>sample-view-context-menus</module>
+		<module>sample-view-tasks</module>
+		<module>sample-webservice-client</module>
+		<module>sample-zoom-network-view</module>
 	</modules>
 </project> 
