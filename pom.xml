@@ -18,7 +18,6 @@
 		<module>sample-create-network-view</module>
 		<module>sample-create-table</module>
 		<module>sample-create-visual-style</module>
-		<module>sample-custom-draw</module>
 		<module>sample-custom-layout</module>
 		<module>sample-delete-table-column</module>
 		<module>sample-embed-dependencies</module>
