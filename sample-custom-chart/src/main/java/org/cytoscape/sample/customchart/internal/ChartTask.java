@@ -187,11 +187,13 @@ public class ChartTask extends AbstractTask implements TunableValidator {
 		// Set the chart properties, tell the chart to use the new column we created as the data source.
 		CyColumnIdentifier columnId = columnIdFactory.createColumnIdentifier(chartColumn);
 		Map<String,Object> chartProps = new HashMap<String, Object>();
-		chartProps.put("dataColumns", Arrays.asList(columnId)); 
-		chartProps.put("colorScheme", "contrasting");
+		chartProps.put("cy_dataColumns", Arrays.asList(columnId)); 
+		chartProps.put("cy_colorScheme", "RAINBOW");
 		
 		// create the chart instance
 		CyCustomGraphics2<?> customGraphics = customGraphicsFactory.getInstance(chartProps);
+		
+		//String scheme = customGraphics.getProperties().get("cy_colorScheme").toString();
 
 		// Set the custom graphics on the visual style
 		VisualStyle visualStyle = visualMappingManager.getCurrentVisualStyle();
