@@ -1,0 +1,174 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- The version of the pom.xml format that this is written in -->
+  <modelVersion>4.0.0</modelVersion>
+  
+  <!--
+    Properties are variables that can be referenced throughout the pom.xml file.
+    When the pom.xml file has repeated elements, it's best to use them as properties.
+  -->
+  <properties>
+    <cytoscape.api.version>3.1.0</cytoscape.api.version>
+    <maven-compiler-plugin.version>2.0.2</maven-compiler-plugin.version>
+    <maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
+    <osgi.api.version>4.2.0</osgi.api.version>
+  </properties>
+
+  <!--
+    These are the key elements of a pom.xml file. All
+    pom.xml files must have a "groupId", "artifactId", and "version".
+    These three things uniquely identify a project in Maven.
+
+    A "groupId" is the hierarchical name of the organization
+    that is making this project.
+
+    An "artifactId" is the name of the project.
+  -->
+  <groupId>edu.ucsf.rbvi</groupId>
+  <artifactId>MyApp</artifactId>
+  <version>1.0</version>
+
+  <!--
+    "packaging" tells Maven what sort of thing you want to build.
+    If we were building a plain, old JAR, we'd put in "jar" here.
+    However, we're building an OSGi bundle JAR, so we've put
+    "bundle" here.
+  -->
+  <packaging>bundle</packaging>
+
+  <!--
+    This section tells Maven how the build is configured.  Maven
+    has numerous plugins that control very specific phases of the
+    build. 
+  -->
+  <build>
+    <plugins>
+      <!--
+        The maven-compiler-plugin configures the Java
+        compiler Maven uses to build the project.
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <!--
+            These options indicate the source code is Java
+            1.7-compliant and the resulting class files
+            should be Java 1.7-compatible.
+          -->
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+        
+      <!--
+        The maven-bundle-plugin creates the metadata
+        that's necessary for an OSGi bundle.  You can
+        customize the OSGi options in the "instructions"
+        section below.
+      -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>${maven-bundle-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>edu.ucsf.rbvi.MyApp</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
+
+            <!--
+              This tells the bundle plugin which packages should not
+              be exported.
+            -->
+            <Private-Package>edu.ucsf.rbvi.myapp.internal.*</Private-Package>
+
+            <Bundle-Activator>edu.ucsf.rbvi.myapp.internal.CyActivator</Bundle-Activator>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!--
+    These are repositories Maven uses to download Cytoscape API JARs we
+    use in our app.
+  -->
+  <repositories>
+    <repository>
+      <id>cytoscape_snapshots</id>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <name>Cytoscape Snapshots</name>
+      <url>http://code.cytoscape.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>cytoscape_releases</id>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <name>Cytoscape Releases</name>
+      <url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
+    </repository>
+  </repositories>
+
+  <!--
+    Our app depends on other OSGi bundle JARs. We list all the JARs
+    we depend on here. Just like our own Maven project, these
+    dependencies are uniquely identified by groupId, artifactId,
+    and version. Dependencies do not necessarily have to be
+    OSGi bundles. They can be regular JAR files, in which case they must
+    be inlined or embedded into this bundle.
+  -->
+  <dependencies>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>application-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>model-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>service-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>viewmodel-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>vizmap-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>presentation-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>work-api</artifactId>
+      <version>${cytoscape.api.version}</version>
+    </dependency>
+    
+    <!-- OSGi core API -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>${osgi.api.version}</version>
+    </dependency>
+  </dependencies>
+</project>
