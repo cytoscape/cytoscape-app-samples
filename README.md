@@ -5,3 +5,5 @@ able to clone these samples, navigate to the directory containing the pom.xml fo
 given sample, and run 'mvn install'. If successful, a new .jar file will be generated
 in the target directory. You can install this .jar from with Cytoscape 3 using the
 App Manager.
+
+This repo also includes a *project-template* directory where you can start you own tutorial or original app projects.
