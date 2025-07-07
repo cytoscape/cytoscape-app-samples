@@ -11,10 +11,8 @@
 	<modules>
 		<module>sample-change-node-border-width</module>
 		<module>sample-control-panel</module>
-		<module>sample-control-panel-simple</module>
 		<module>sample-create-nested-network</module>
 		<module>sample-create-network</module>
-		<module>sample-create-network-simple</module>
 		<module>sample-create-network-view</module>
 		<module>sample-create-table</module>
 		<module>sample-create-visual-style</module>
@@ -27,10 +25,8 @@
 		<module>sample-get-selected-nodes</module>
 		<module>sample-help</module>
 		<module>sample-icon-action</module>
-		<module>sample-icon-action-simple</module>
 		<module>sample-import-visual-style</module>
 		<module>sample-network-events-listener</module>
-		<module>sample-network-reader-simple</module>
 		<module>sample-save-restore-state-file</module>
 		<module>sample-service-listener</module>
 		<module>sample-set-network-background-color</module>
