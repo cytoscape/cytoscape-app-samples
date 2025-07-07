@@ -51,7 +51,7 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-		<!-- Cytoscape requires Java 1.6 -->
+		<!-- Cytoscape requires Java 17 -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -74,8 +74,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
